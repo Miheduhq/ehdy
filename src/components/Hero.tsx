@@ -19,11 +19,11 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-22\" style={{ backgroundColor: '#0A090F' }}>
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-22" style={{ backgroundColor: '#0A090F' }}>
         {/* Background Gradient Texture */}
         <div className="absolute inset-0">
           <svg 
-            className="absolute right-0 top-0 h-full w-auto opacity-80 hidden lg:block" 
+            className="absolute right-0 top-0 h-full w-auto hidden lg:block animate-float" 
             width="406" 
             height="798" 
             viewBox="0 0 406 798" 
@@ -72,12 +72,12 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
 
         <div className="relative z-10 w-full px-4 sm:px-6 py-8 sm:py-52">
           <div className="ml-0 sm:ml-8 md:ml-16 lg:ml-24">
-            <h1 className="text-white leading-tight mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium" style={{
+            <h1 className="text-white leading-tight mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium animate-fade-in-up" style={{
               fontFamily: 'Inter',
               letterSpacing: '-2px'
             }}>
               Votre site en{' '}
-              <span style={{
+              <span className="animate-gradient-text" style={{
                 background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
@@ -88,7 +88,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               </span>
               <br />
               pour{' '}
-              <span style={{
+              <span className="animate-gradient-text" style={{
                 background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
@@ -100,14 +100,14 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               par mois
             </h1>
             
-            <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 leading-relaxed font-inter max-w-xl lg:max-w-2xl">
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 leading-relaxed font-inter max-w-xl lg:max-w-2xl animate-fade-in-up animation-delay-200">
               Créez votre présence en ligne avec notre solution tout-en-un. 
               Design moderne, développement rapide, et maintenance incluse.
             </p>
 
             <button 
               onClick={openContactModal}
-              className="bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl font-inter"
+              className="bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl font-inter animate-fade-in-up animation-delay-400 hover:animate-pulse-gentle"
             >
               Obtenir un{' '}
               <span style={{
@@ -128,25 +128,25 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
         <div className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
             {/* Left Image - Desktop only */}
-            <div className="hidden lg:block lg:col-span-3">
+            <div className="hidden lg:block lg:col-span-3 animate-slide-in-left">
               <img 
                 src="https://i.ibb.co/Zp6Xgvbn/637c87196877b65904186aec-hedy-home-01-p-800-webp.png" 
                 alt="Team collaboration" 
-                className="w-full h-auto block"
+                className="w-full h-auto block hover:scale-105 transition-transform duration-500"
               />
             </div>
 
             {/* Center Content */}
-            <div className="lg:col-span-6 text-center px-4 sm:px-6 lg:px-8">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <div className="lg:col-span-6 text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-text-reveal">
                 Make you grow,{' '}
-                <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
                   together
                 </span>
                 .
               </h2>
               
-              <div className="text-gray-600 text-lg leading-relaxed mb-8 max-w-3xl mx-auto">
+              <div className="text-gray-600 text-lg leading-relaxed mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
                 <p className="mb-4">
                   Vous avez beaucoup à nous apprendre sur votre marché et votre offre.{' '}
                   <span className="font-semibold text-gray-900">
@@ -167,7 +167,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
 
               <button 
                 onClick={openContactModal}
-                className="inline-flex items-center justify-center text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                className="inline-flex items-center justify-center text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in-up animation-delay-400 hover:animate-bounce-gentle"
                 style={{
                   width: '252px',
                   height: '60px',
@@ -180,11 +180,11 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             </div>
 
             {/* Right Image - Desktop only */}
-            <div className="hidden lg:block lg:col-span-3">
+            <div className="hidden lg:block lg:col-span-3 animate-slide-in-right">
               <img 
                 src="https://i.ibb.co/C3CgTmCd/637c87196877b65904186aec-hedy-home-01-p-1080-webp.png" 
                 alt="Digital collaboration" 
-                className="w-full h-auto block"
+                className="w-full h-auto block hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
@@ -192,10 +192,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
       </section>
 
       {/* Ils nous ont fait confiance section */}
-      <section className="py-16 md:py-20" style={{ backgroundColor: '#F4F4F4' }}>
-        <div className="max-w-7xl mx-auto  sm:px-12 lg:px-16">
+      <section className="py-16 md:py-20 animate-fade-in-up" style={{ backgroundColor: '#F4F4F4' }}>
+        <div className="max-w-7xl mx-auto sm:px-12 lg:px-16">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 animate-text-reveal">
               Ils nous ont
               <br />
               fait confiance
@@ -205,36 +205,36 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
           {/* Desktop Logo Grid */}
           <div className="hidden md:grid grid-cols-5 gap-8 lg:gap-12 items-center justify-items-center">
             {/* Row 1 */}
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-100 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/ds1fbr5w/1.png" alt="Logo 1" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-200 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/q3DGrtjB/2.png" alt="Logo 2" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-300 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/JV2nnCH/3.png" alt="Logo 3" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28  rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-400 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/Tq8Jx8b7/4.png" alt="Logo 4" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28  rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-500 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/SDvj8WCX/5.png" alt="Logo 5" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
 
             {/* Row 2 */}
-            <div className="w-24 h-24 lg:w-28 lg:h-28  rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-600 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/zW0q9nR6/6.png" alt="Logo 6" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28  rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-700 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/b50YRtBc/7.png" alt="Logo 7" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28  rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-800 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/gbzH6XrF/8.png" alt="Logo 8" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-900 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/B5Yj0Zvx/9.png" alt="Logo 9" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28  rounded-lg flex items-center justify-center">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-1000 hover:scale-110 transition-transform duration-300">
               <img src="https://i.ibb.co/mr86DGQ3/10.png" alt="Logo 10" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
           </div>
@@ -244,68 +244,68 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             <div className="flex animate-scroll space-x-6 w-max">
               {/* First set of logos */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/ds1fbr5w/1.png" alt="Logo 1" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/q3DGrtjB/2.png" alt="Logo 2" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/JV2nnCH/3.png" alt="Logo 3" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/Tq8Jx8b7/4.png" alt="Logo 4" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/SDvj8WCX/5.png" alt="Logo 5" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/zW0q9nR6/6.png" alt="Logo 6" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/b50YRtBc/7.png" alt="Logo 7" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/gbzH6XrF/8.png" alt="Logo 8" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/B5Yj0Zvx/9.png" alt="Logo 9" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/mr86DGQ3/10.png" alt="Logo 10" className="object-contain w-20 h-20" />
                 </div>
               </div>
               
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/ds1fbr5w/1.png" alt="Logo 1" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/q3DGrtjB/2.png" alt="Logo 2" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/JV2nnCH/3.png" alt="Logo 3" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/Tq8Jx8b7/4.png" alt="Logo 4" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/SDvj8WCX/5.png" alt="Logo 5" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/zW0q9nR6/6.png" alt="Logo 6" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/b50YRtBc/7.png" alt="Logo 7" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/gbzH6XrF/8.png" alt="Logo 8" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/B5Yj0Zvx/9.png" alt="Logo 9" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src="https://i.ibb.co/mr86DGQ3/10.png" alt="Logo 10" className="object-contain w-20 h-20" />
                 </div>
               </div>
@@ -315,12 +315,12 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
       </section>
 
       {/* Testimonials section */}
-      <section className="py-16 md:py-20" style={{ backgroundColor: '#0A090F' }}>
-        <div className="max-w-7xl mx-auto ">
+      <section className="py-16 md:py-20 animate-fade-in-up" style={{ backgroundColor: '#0A090F' }}>
+        <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 animate-text-reveal">
               Apprécié par des milliers de{' '}
-              <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
                 clients
               </span>
             </h2>
@@ -329,10 +329,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
           {/* Desktop testimonials grid */}
           <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Testimonial 1 */}
-            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up animation-delay-100 hover:scale-105">
               <div className="flex mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
+                  <svg key={i} width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
                     <g clipPath="url(#clip0_2_216)">
                       <path d="M10.8438 16.5579L17.1737 20.3779L15.4937 13.1679L21.0837 8.32795L13.7137 7.68795L10.8438 0.897949L7.96375 7.69795L0.59375 8.32795L6.18375 13.1679L4.50375 20.3779L10.8438 16.5579Z" fill="#FFC247"/>
                     </g>
@@ -351,10 +351,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up animation-delay-200 hover:scale-105">
               <div className="flex mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
+                  <svg key={i} width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
                     <g clipPath="url(#clip0_2_216)">
                       <path d="M10.8438 16.5579L17.1737 20.3779L15.4937 13.1679L21.0837 8.32795L13.7137 7.68795L10.8438 0.897949L7.96375 7.69795L0.59375 8.32795L6.18375 13.1679L4.50375 20.3779L10.8438 16.5579Z" fill="#FFC247"/>
                     </g>
@@ -373,10 +373,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300">
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up animation-delay-300 hover:scale-105">
               <div className="flex mb-6">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
+                  <svg key={i} width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
                     <g clipPath="url(#clip0_2_216)">
                       <path d="M10.8438 16.5579L17.1737 20.3779L15.4937 13.1679L21.0837 8.32795L13.7137 7.68795L10.8438 0.897949L7.96375 7.69795L0.59375 8.32795L6.18375 13.1679L4.50375 20.3779L10.8438 16.5579Z" fill="#FFC247"/>
                     </g>
@@ -400,10 +400,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             <div className="flex animate-scroll space-x-6 w-max">
               {/* First set */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
+                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
                         <g clipPath="url(#clip0_2_216)">
                           <path d="M10.8438 16.5579L17.1737 20.3779L15.4937 13.1679L21.0837 8.32795L13.7137 7.68795L10.8438 0.897949L7.96375 7.69795L0.59375 8.32795L6.18375 13.1679L4.50375 20.3779L10.8438 16.5579Z" fill="#FFC247"/>
                         </g>
@@ -421,10 +421,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                   <p className="font-semibold text-gray-900 text-sm">colinandmandy94</p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
+                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
                         <g clipPath="url(#clip0_2_216)">
                           <path d="M10.8438 16.5579L17.1737 20.3779L15.4937 13.1679L21.0837 8.32795L13.7137 7.68795L10.8438 0.897949L7.96375 7.69795L0.59375 8.32795L6.18375 13.1679L4.50375 20.3779L10.8438 16.5579Z" fill="#FFC247"/>
                         </g>
@@ -442,10 +442,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                   <p className="font-semibold text-gray-900 text-sm">Jennifer Black</p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
+                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
                         <g clipPath="url(#clip0_2_216)">
                           <path d="M10.8438 16.5579L17.1737 20.3779L15.4937 13.1679L21.0837 8.32795L13.7137 7.68795L10.8438 0.897949L7.96375 7.69795L0.59375 8.32795L6.18375 13.1679L4.50375 20.3779L10.8438 16.5579Z" fill="#FFC247"/>
                         </g>
@@ -466,10 +466,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
 
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
+                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
                         <g clipPath="url(#clip0_2_216)">
                           <path d="M10.8438 16.5579L17.1737 20.3779L15.4937 13.1679L21.0837 8.32795L13.7137 7.68795L10.8438 0.897949L7.96375 7.69795L0.59375 8.32795L6.18375 13.1679L4.50375 20.3779L10.8438 16.5579Z" fill="#FFC247"/>
                         </g>
@@ -487,10 +487,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                   <p className="font-semibold text-gray-900 text-sm">colinandmandy94</p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
+                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
                         <g clipPath="url(#clip0_2_216)">
                           <path d="M10.8438 16.5579L17.1737 20.3779L15.4937 13.1679L21.0837 8.32795L13.7137 7.68795L10.8438 0.897949L7.96375 7.69795L0.59375 8.32795L6.18375 13.1679L4.50375 20.3779L10.8438 16.5579Z" fill="#FFC247"/>
                         </g>
@@ -508,10 +508,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                   <p className="font-semibold text-gray-900 text-sm">Jennifer Black</p>
                 </div>
 
-                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
+                      <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
                         <g clipPath="url(#clip0_2_216)">
                           <path d="M10.8438 16.5579L17.1737 20.3779L15.4937 13.1679L21.0837 8.32795L13.7137 7.68795L10.8438 0.897949L7.96375 7.69795L0.59375 8.32795L6.18375 13.1679L4.50375 20.3779L10.8438 16.5579Z" fill="#FFC247"/>
                         </g>

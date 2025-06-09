@@ -162,22 +162,22 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto">
+    <div className="fixed inset-0 z-50 overflow-y-auto animate-fade-in">
       <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
         {/* Background overlay */}
         <div 
-          className="fixed inset-0 transition-opacity bg-black bg-opacity-75"
+          className="fixed inset-0 transition-opacity bg-black bg-opacity-75 animate-fade-in"
           onClick={onClose}
         ></div>
 
         {/* Modal */}
-        <div className="inline-block w-full max-w-4xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl sm:my-16">
+        <div className="inline-block w-full max-w-4xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl sm:my-16 animate-scale-in">
           {/* Header */}
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-6 animate-slide-down">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
                 Votre site en{' '}
-                <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
                   24h
                 </span>
               </h2>
@@ -187,16 +187,16 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             </div>
             <button
               onClick={onClose}
-              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+              className="p-2 text-gray-400 hover:text-gray-600 transition-all duration-300 hover:scale-110 transform hover:rotate-90"
             >
               <X size={24} />
             </button>
           </div>
 
           {/* Guarantee Banner */}
-          <div className="mb-6 p-4 bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 rounded-lg">
+          <div className="mb-6 p-4 bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 rounded-lg animate-fade-in-up animation-delay-200">
             <div className="flex items-center space-x-3">
-              <Clock className="w-6 h-6 text-pink-500 flex-shrink-0" />
+              <Clock className="w-6 h-6 text-pink-500 flex-shrink-0 animate-pulse" />
               <div>
                 <h3 className="font-semibold text-gray-900">Garantie de rappel sous 24h</h3>
                 <p className="text-sm text-gray-600">
@@ -207,7 +207,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           {submitStatus === 'success' && (
-            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-3">
+            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-3 animate-bounce-in">
               <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
               <div>
                 <p className="text-green-800 font-medium">
@@ -221,7 +221,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           )}
 
           {submitStatus === 'error' && (
-            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center space-x-3">
+            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center space-x-3 animate-shake">
               <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
               <p className="text-red-800">
                 Une erreur s'est produite lors de l'envoi. Veuillez réessayer ou nous contacter directement.
@@ -231,7 +231,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
 
           <form onSubmit={handleSubmit} className="space-y-6 max-h-96 overflow-y-auto pr-2">
             {/* Informations personnelles */}
-            <div>
+            <div className="animate-fade-in-up animation-delay-300">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                 <User className="w-5 h-5 mr-2 text-pink-500" />
                 Vos informations
@@ -248,7 +248,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
                     placeholder="Votre nom et prénom"
                   />
                 </div>
@@ -263,7 +263,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
                     placeholder="votre@email.com"
                   />
                 </div>
@@ -277,7 +277,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
                     placeholder="06 12 34 56 78"
                   />
                 </div>
@@ -291,7 +291,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
                     placeholder="Nom de votre entreprise"
                   />
                 </div>
@@ -299,7 +299,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Détails du projet */}
-            <div>
+            <div className="animate-fade-in-up animation-delay-400">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                 <Globe className="w-5 h-5 mr-2 text-pink-500" />
                 Votre projet
@@ -315,7 +315,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   required
                   value={formData.projectType}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
                 >
                   <option value="">Sélectionnez</option>
                   {projectTypes.map(type => (
@@ -335,7 +335,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   rows={3}
                   value={formData.description}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
                   placeholder="Décrivez votre projet, vos objectifs, votre cible..."
                 />
               </div>
@@ -347,12 +347,12 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 </label>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                   {featureOptions.map(feature => (
-                    <label key={feature} className="flex items-center space-x-2 cursor-pointer text-sm">
+                    <label key={feature} className="flex items-center space-x-2 cursor-pointer text-sm hover:scale-105 transition-transform duration-200">
                       <input
                         type="checkbox"
                         checked={formData.features.includes(feature)}
                         onChange={() => handleFeatureToggle(feature)}
-                        className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
+                        className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500 transition-all duration-200"
                       />
                       <span className="text-gray-700">{feature}</span>
                     </label>
@@ -366,7 +366,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   Avez-vous déjà un site web ?
                 </label>
                 <div className="flex space-x-6 mb-3">
-                  <label className="flex items-center space-x-2 cursor-pointer">
+                  <label className="flex items-center space-x-2 cursor-pointer hover:scale-105 transition-transform duration-200">
                     <input
                       type="radio"
                       name="hasExistingSite"
@@ -377,7 +377,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     />
                     <span className="text-sm text-gray-700">Oui</span>
                   </label>
-                  <label className="flex items-center space-x-2 cursor-pointer">
+                  <label className="flex items-center space-x-2 cursor-pointer hover:scale-105 transition-transform duration-200">
                     <input
                       type="radio"
                       name="hasExistingSite"
@@ -395,7 +395,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     name="currentSite"
                     value={formData.currentSite}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300 animate-slide-down"
                     placeholder="https://votre-site-actuel.com"
                   />
                 )}
@@ -404,7 +404,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           </form>
 
           {/* Footer */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
+          <div className="mt-6 pt-6 border-t border-gray-200 animate-fade-in-up animation-delay-500">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <div className="text-sm text-gray-500">
                 <p className="font-medium text-gray-700">Site en 24h pour 100€/mois</p>
