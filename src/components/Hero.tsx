@@ -19,47 +19,66 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-32 overflow-hidden">
-        {/* Background Gradient Texture - Version blanche de l'illustration */}
-        <div className="absolute inset-0 opacity-10">
+      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-22\" style={{ backgroundColor: '#0A090F' }}>
+        {/* Background Gradient Texture */}
+        <div className="absolute inset-0">
           <svg 
             className="absolute right-0 top-0 h-full w-auto hidden lg:block animate-float" 
-            width="845" 
-            height="814" 
-            viewBox="0 0 845 814" 
+            width="406" 
+            height="798" 
+            viewBox="0 0 406 798" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
           >
+            <path d="M48.6562 110.89C67.3309 111.806 85.6426 105.739 99.6173 94.001C117.328 77.2583 126.785 61.1014 128.59 44.554C129.868 37.0874 129.255 29.4411 126.807 22.2396C124.368 15.0383 120.146 8.48625 114.51 3.11899C108.874 -2.2483 101.971 -6.27846 94.3715 -8.64235C86.772 -11.0061 78.6869 -11.6367 70.7813 -10.4821C31.7198 -6.94315 -1.19776 28.2751 0.196542 64.738C0.408695 76.857 5.57114 88.4289 14.603 97.0313C23.6358 105.634 35.8383 110.6 48.6562 110.89Z" fill="url(#paint0_linear_0_1)"/>
+            <path d="M6.2381 259.548V257.596C6.2286 253.358 6.21595 249.091 6.20434 244.804C6.15051 225.685 6.0946 206.158 6.26348 186.939C6.36692 178.837 8.12215 173.175 11.7625 169.733C15.4029 166.292 21.1089 164.656 29.3702 164.217C119.112 159.581 180.299 101.689 185.333 16.7796C186.241 0.891216 192.563 -4.79546 209.504 -4.94192C235.216 -5.18598 261.519 -5.11276 286.28 -4.99073C296.761 -4.8443 303.991 -2.8918 307.791 0.695908C311.58 4.28362 313.238 10.7268 312.953 20.2209C310.63 91.487 282.101 154.04 228.239 206.172C174.05 255.692 108.737 282.246 34.3532 284.711C23.4584 285.101 16.2811 283.393 12.2534 279.879C8.22562 276.364 6.28982 269.701 6.2381 259.548Z" fill="url(#paint1_linear_0_1)"/>
+            <path d="M298.291 363.08C261.465 343.846 222.824 327.882 182.884 315.39L182.209 315.194C173.712 312.436 172.044 311.339 171.601 308.238C171.411 307.191 171.517 306.115 171.897 305.116C172.277 304.116 172.921 303.225 173.765 302.528C175.908 300.688 178.303 299.143 180.889 297.939C205.905 285.451 229.231 270.143 250.341 252.348C321.966 190.894 360.09 113.307 363.658 21.783C364.481 0.207861 369.927 -4.74665 392.726 -4.8199C411.334 -4.83617 429.942 -4.83616 448.551 -4.81986L462.304 -4.84424C474.516 -4.81981 482.495 -2.84288 486.263 0.866895C490.031 4.57665 491.689 11.6056 491.298 22.3688C486.992 140.52 441.553 240.731 352.353 328.716C349.303 331.205 345.999 333.841 342.485 336.624C341.355 337.534 340.205 338.459 339.033 339.398C330.283 346.423 320.636 354.164 311.094 362.152C306.809 365.715 304.382 366.35 298.291 363.08Z" fill="url(#paint2_linear_0_1)"/>
+            <path d="M674.679 472.977C681.033 475.027 683.693 477.541 684.03 479.129C684.337 480.544 683.102 483.57 678.584 487.499C674.12 490.111 669.412 492.698 664.641 495.309C652.672 501.644 641.114 508.645 630.021 516.275C542.236 579.535 495.71 664.225 491.868 767.975C491.172 786.793 484.923 792.553 465.091 792.602H459.929C436.898 792.651 413.097 792.699 389.707 792.553C380.124 792.48 373.052 790.283 369.358 786.646C365.674 783.01 363.943 777.03 364.228 768.854C368.619 646.872 414.934 543.585 502.17 461.116C514.371 449.58 527.364 438.468 541.149 427.778C548.379 422.164 552.337 421.847 560.443 426.191C596.868 445.179 635.119 460.845 674.679 472.977Z" fill="url(#paint3_linear_0_1)"/>
+            <path d="M31.1772 334.033C177.766 338.67 298.883 394.585 391.154 500.167C397.866 507.879 398.278 512.076 393.222 520.472C373.928 553.262 358.043 587.738 345.768 623.418L344.86 626.078C341.894 634.839 340.68 635.841 337.303 636.06C332.289 636.45 330.125 633.864 324.88 624.565C308.973 596.351 288.655 570.566 264.622 548.076C200.596 488.768 122.933 457.333 33.7853 454.673C11.8659 454.014 6.21172 448.572 6.21172 428.119L6.18531 410.425C6.13465 393.031 6.14311 375.63 6.21172 358.22C6.26344 349.288 8.30263 342.819 12.2787 339.061L12.4855 338.866C16.3317 335.375 22.6056 333.74 31.1772 334.033Z" fill="url(#paint4_linear_0_1)"/>
+            <path d="M307.685 786.963C303.706 790.771 296.972 792.601 286.639 792.601C262.12 792.699 235.986 792.796 209.863 792.357C192.31 792.357 186.188 786.719 185.259 769.733C180.636 686.435 118.13 627.493 29.7573 623.173C12.537 622.368 6.39304 616.559 6.21255 600.915C5.95395 576.753 6.05743 552.249 6.26325 525.744C6.39307 517.372 7.99315 511.71 11.9438 507.976C15.8935 504.242 22.142 502.631 31.2551 502.656C105.528 502.778 178.831 535.115 243.374 596.131C285.225 636.816 310.472 699.003 312.847 766.902C313.311 776.762 311.665 783.156 307.685 786.963Z" fill="url(#paint5_linear_0_1)"/>
+            <path d="M95.5323 795.59C88.4394 797.935 80.9032 798.822 73.4198 798.19C37.0635 796.287 3.65517 765.73 0.427482 731.683C-0.573121 724.249 0.187861 716.697 2.6577 709.575C5.12755 702.455 9.2429 695.941 14.7051 690.511L15.3246 689.924C21.2575 684.734 28.363 680.89 36.1019 678.683C43.8407 676.475 52.0102 675.963 59.9897 677.185C77.6206 679.308 92.5452 686.824 108.219 701.64C120.294 713.496 127.556 729.002 128.717 745.424C129.487 752.477 128.643 759.603 126.247 766.321C123.84 773.038 119.935 779.188 114.805 784.352L114.542 784.596C109.106 789.498 102.625 793.246 95.5323 795.59Z" fill="url(#paint6_linear_0_1)"/>
             <defs>
-              <linearGradient id="whiteGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#ffffff" stopOpacity="0.8"/>
-                <stop offset="100%" stopColor="#f8f9fa" stopOpacity="0.6"/>
+              <linearGradient id="paint0_linear_0_1" x1="0.000251003" y1="799.927" x2="482.698" y2="365.079" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#D95DB0"/>
+                <stop offset="1" stopColor="#3344DC"/>
+              </linearGradient>
+              <linearGradient id="paint1_linear_0_1" x1="0.000207568" y1="799.926" x2="482.698" y2="365.079" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#D95DB0"/>
+                <stop offset="1" stopColor="#3344DC"/>
+              </linearGradient>
+              <linearGradient id="paint2_linear_0_1" x1="-0.000217552" y1="799.927" x2="482.697" y2="365.079" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#D95DB0"/>
+                <stop offset="1" stopColor="#3344DC"/>
+              </linearGradient>
+              <linearGradient id="paint3_linear_0_1" x1="6.30859e-05" y1="800.314" x2="482.698" y2="365.466" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#D95DB0"/>
+                <stop offset="1" stopColor="#3344DC"/>
+              </linearGradient>
+              <linearGradient id="paint4_linear_0_1" x1="0.000153524" y1="800.314" x2="482.698" y2="365.467" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#D95DB0"/>
+                <stop offset="1" stopColor="#3344DC"/>
+              </linearGradient>
+              <linearGradient id="paint5_linear_0_1" x1="-3.36986e-05" y1="800.314" x2="482.698" y2="365.467" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#D95DB0"/>
+                <stop offset="1" stopColor="#3344DC"/>
+              </linearGradient>
+              <linearGradient id="paint6_linear_0_1" x1="2.2999e-06" y1="800.314" x2="482.698" y2="365.467" gradientUnits="userSpaceOnUse">
+                <stop stopColor="#D95DB0"/>
+                <stop offset="1" stopColor="#3344DC"/>
               </linearGradient>
             </defs>
-            <g>
-              <path d="M48.39,122.68c18.57.92,36.79-5.18,50.69-16.99,17.62-16.84,27.02-33.1,28.82-49.75,1.27-7.51.66-15.21-1.77-22.45-2.43-7.25-6.62-13.84-12.23-19.24-5.61-5.4-12.47-9.46-20.03-11.83-7.56-2.38-15.6-3.01-23.46-1.85C31.55,4.13-1.19,39.56.2,76.25c.21,12.19,5.35,23.84,14.33,32.49,8.98,8.66,21.12,13.65,33.87,13.94Z" fill="url(#whiteGradient)"/>
-              <path d="M6.2,272.25v-1.96c0-4.26-.02-8.56-.03-12.87-.05-19.24-.11-38.88.06-58.22.1-8.15,1.85-13.85,5.47-17.31,3.62-3.46,9.3-5.11,17.51-5.55,89.26-4.67,150.11-62.91,155.12-148.34.9-15.99,7.19-21.71,24.04-21.85,25.57-.25,51.73-.17,76.36-.05,10.42.15,17.61,2.11,21.39,5.72,3.77,3.61,5.42,10.09,5.13,19.64-2.31,71.7-30.68,134.64-84.25,187.09-53.9,49.82-118.86,76.54-192.84,79.02-10.84.39-17.97-1.33-21.98-4.86-4.01-3.54-5.93-10.24-5.98-20.46Z" fill="url(#whiteGradient)"/>
-              <path d="M296.68,376.42c-36.63-19.35-75.06-35.41-114.78-47.98l-.67-.2c-8.45-2.77-10.11-3.88-10.55-7-.19-1.05-.08-2.14.29-3.14.38-1.01,1.02-1.9,1.86-2.6,2.13-1.85,4.51-3.41,7.09-4.62,24.88-12.56,48.08-27.97,69.07-45.87,71.24-61.83,109.16-139.89,112.7-231.98.82-21.71,6.24-26.69,28.91-26.77,18.51-.02,37.01-.02,55.52,0l13.68-.02c12.15.02,20.08,2.01,23.83,5.75,3.75,3.73,5.4,10.8,5.01,21.63-4.28,118.87-49.48,219.7-138.19,308.22-3.03,2.5-6.32,5.16-9.82,7.96-1.12.92-2.27,1.85-3.43,2.79-8.7,7.07-18.3,14.86-27.79,22.89-4.26,3.58-6.68,4.22-12.73.93Z" fill="url(#whiteGradient)"/>
-              <path d="M671.03,486.6c6.32,2.06,8.97,4.59,9.3,6.19.3,1.42-.92,4.47-5.42,8.42-4.44,2.63-9.12,5.23-13.87,7.86-11.91,6.37-23.4,13.42-34.43,21.09-87.31,63.65-133.58,148.86-137.4,253.24-.69,18.93-6.91,24.73-26.63,24.78h-5.13c-22.91.05-46.58.1-69.84-.05-9.53-.07-16.56-2.28-20.24-5.94-3.66-3.66-5.39-9.67-5.1-17.9,4.37-122.73,50.43-226.65,137.19-309.62,12.14-11.61,25.06-22.79,38.77-33.54,7.19-5.65,11.13-5.97,19.19-1.6,36.23,19.1,74.27,34.87,113.62,47.07Z" fill="url(#whiteGradient)"/>
-              <path d="M457.85,295.16l5.32,6.16c10.62,12.83,21.92,25.13,33.87,36.86,89.98,82.65,198.21,126.19,321.69,129.46,9.52.22,16.05-1.4,19.98-5.06l.16-.15c3.9-3.73,5.83-10.09,5.88-19.42l.02-.66c.1-24.16.16-49.26,0-73.67-.23-14.95-7.44-21.85-23.34-22.32-102.05-2.55-187.45-41.3-253.93-115.14-15.87-18.06-29.67-37.71-41.14-58.59-4.55-8.03-7.34-9.38-11.01-9.11-3.67.27-4.47,1.96-7.37,10.19-13.41,38.49-30.41,75.74-50.82,111.31-2.82,4.86-2.28,6.65.69,10.14Z" fill="url(#whiteGradient)"/>
-              <path d="M31.01,346.8c145.79,4.67,266.26,60.92,358.03,167.15,6.68,7.76,7.09,11.98,2.06,20.43-19.19,32.99-34.99,67.68-47.2,103.58l-.9,2.68c-2.95,8.82-4.16,9.82-7.52,10.04-4.99.39-7.14-2.21-12.36-11.57-15.82-28.39-36.03-54.33-59.93-76.96-63.68-59.67-140.92-91.3-229.59-93.98-21.8-.66-27.42-6.14-27.42-26.72l-.03-17.8c-.05-17.5-.04-35.01.03-52.52.05-8.99,2.08-15.49,6.03-19.28l.21-.2c3.83-3.51,10.07-5.16,18.59-4.86Z" fill="url(#whiteGradient)"/>
-              <path d="M845.08,560.41c-.03-7.82-.04-15.66-.03-23.5.13-2.83-.36-5.66-1.43-8.3-1.08-2.64-2.72-5.04-4.81-7.05-4.16-3.68-9.8-5.35-18.54-5.21-71.9,0-143.64,29.61-196.66,80.32-53.16,50.83-83.67,119.29-83.51,187.9-.02,17.02,6.66,23.4,24.57,23.5,27.1.22,53.75.17,79.22-.07,15.66-.24,22.23-6.14,23.16-21.31,5.24-86.34,64.97-143.41,155.82-149,15.27-.91,21.93-7.17,22.04-21.07.23-18.54.32-37.55.18-56.21Z" fill="url(#whiteGradient)"/>
-              <path d="M540.03,31.14c2.03,61.51,22.52,115.98,60.8,161.77,56.43,67.48,130.98,102.77,221.6,104.9,3.02.5,6.13.31,9.06-.56,2.94-.87,5.62-2.38,7.82-4.42,2.2-2.04,3.87-4.55,4.87-7.32,1-2.77,1.3-5.73.87-8.64.39-27.58.39-54.39-.02-79.78-.23-13.58-6.94-20.23-20.6-20.33-41.83-.35-81.85-16.44-111.37-44.79-29.52-28.35-46.18-66.68-46.37-106.69,0-15.37-11.12-18.83-20.36-18.93-17.17-.31-34.58-.3-51.78-.29h-.02s-.01,0-.01,0c-4.9,0-9.78,0-14.64,0l-20.08.1c-2.65-.04-5.28.44-7.73,1.41-2.46.97-4.67,2.4-6.52,4.22-4.32,4.37-5.96,9.97-5.52,19.37Z" fill="url(#whiteGradient)"/>
-              <path d="M306.02,802.51c-3.96,3.83-10.66,5.67-20.93,5.67-24.39.1-50.38.2-76.36-.24-17.46,0-23.55-5.67-24.47-22.76-4.6-83.81-66.76-143.11-154.66-147.46-17.13-.81-23.24-6.65-23.42-22.39-.26-24.31-.15-48.96.05-75.63.13-8.42,1.72-14.12,5.65-17.88,3.93-3.76,10.14-5.38,19.21-5.35,73.87.12,146.78,32.66,210.97,94.05,41.62,40.93,66.73,103.5,69.1,171.82.46,9.92-1.18,16.35-5.13,20.18Z" fill="url(#whiteGradient)"/>
-              <path d="M95.01,811.19c-7.05,2.36-14.55,3.25-21.99,2.62-36.16-1.92-69.39-32.66-72.6-66.91-1-7.48-.24-15.08,2.22-22.24,2.46-7.16,6.55-13.72,11.98-19.18l.62-.59c5.9-5.22,12.97-9.09,20.66-11.31,7.7-2.22,15.82-2.74,23.76-1.51,17.54,2.14,32.38,9.7,47.97,24.6,12.01,11.93,19.23,27.53,20.39,44.05.77,7.1-.07,14.27-2.46,21.03-2.39,6.76-6.28,12.95-11.38,18.14l-.26.25c-5.41,4.93-11.85,8.7-18.91,11.06Z" fill="url(#whiteGradient)"/>
-            </g>
           </svg>
         </div>
 
-        <div className="relative z-10 w-full px-4 sm:px-6 py-8 sm:py-20">
+        <div className="relative z-10 w-full px-4 sm:px-6 py-8 sm:py-52">
           <div className="ml-0 sm:ml-8 md:ml-16 lg:ml-24">
-            <h1 className="text-gray-900 leading-tight mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium animate-fade-in-up" style={{
+            <h1 className="text-white leading-tight mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium animate-fade-in-up" style={{
               fontFamily: 'Inter',
               letterSpacing: '-2px'
             }}>
               Votre site vitrine{' '}
               <span className="animate-gradient-text" style={{
-                background: 'linear-gradient(50deg, #9333ea -0.73%, #ec4899 365.51%)',
+                background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -70,7 +89,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               <br />
               en 24h dès{' '}
               <span className="animate-gradient-text" style={{
-                background: 'linear-gradient(50deg, #9333ea -0.73%, #ec4899 365.51%)',
+                background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent',
@@ -81,17 +100,22 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               par mois
             </h1>
             
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 leading-relaxed font-inter max-w-xl lg:max-w-2xl animate-fade-in-up animation-delay-200">
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 leading-relaxed font-inter max-w-xl lg:max-w-2xl animate-fade-in-up animation-delay-200">
               Créez votre présence digitale avec notre solution tout-en-un. 
               Design moderne, développement rapide, hébergement et maintenance inclus.
             </p>
 
             <button 
               onClick={openContactModal}
-              className="bg-gradient-to-r from-purple-600 to-pink-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:from-purple-700 hover:to-pink-600 transition-all duration-300 transform hover:scale-105 hover:shadow-xl font-inter animate-fade-in-up animation-delay-400 hover:animate-pulse-gentle"
+              className="bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl font-inter animate-fade-in-up animation-delay-400 hover:animate-pulse-gentle"
             >
               Obtenir mon{' '}
-              <span className="text-yellow-200">
+              <span style={{
+                background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}>
                 devis gratuit
               </span>
             </button>
@@ -100,7 +124,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
       </section>
 
       {/* Votre succès digital section */}
-      <section id="services" className="py-16 md:py-24 bg-white/50 backdrop-blur-sm overflow-hidden">
+      <section id="services" className="py-16 md:py-24 bg-white overflow-hidden">
         <div className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
             {/* Left Image - Desktop only */}
@@ -108,7 +132,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               <img 
                 src="https://i.ibb.co/Zp6Xgvbn/637c87196877b65904186aec-hedy-home-01-p-800-webp.png" 
                 alt="Team collaboration" 
-                className="w-full h-auto block hover:scale-105 transition-transform duration-500 rounded-lg shadow-lg"
+                className="w-full h-auto block hover:scale-105 transition-transform duration-500"
               />
             </div>
 
@@ -116,7 +140,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             <div className="lg:col-span-6 text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-text-reveal">
                 Votre succès digital{' '}
-                <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent animate-gradient-text">
+                <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
                   commence ici
                 </span>
                 .
@@ -144,11 +168,12 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
 
               <button 
                 onClick={openContactModal}
-                className="inline-flex items-center justify-center text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in-up animation-delay-400 hover:animate-bounce-gentle bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600"
+                className="inline-flex items-center justify-center text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl animate-fade-in-up animation-delay-400 hover:animate-bounce-gentle"
                 style={{
                   width: '252px',
                   height: '60px',
-                  padding: '17px 55.597px 18px 55.797px'
+                  padding: '17px 55.597px 18px 55.797px',
+                  background: 'linear-gradient(90deg, #D95DB0 0%, #3344DC 100%)'
                 }}
               >
                 Démarrer mon projet
@@ -160,7 +185,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               <img 
                 src="https://i.ibb.co/C3CgTmCd/637c87196877b65904186aec-hedy-home-01-p-1080-webp.png" 
                 alt="Digital collaboration" 
-                className="w-full h-auto block hover:scale-105 transition-transform duration-500 rounded-lg shadow-lg"
+                className="w-full h-auto block hover:scale-105 transition-transform duration-500"
               />
             </div>
           </div>
@@ -168,7 +193,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
       </section>
 
       {/* Ils nous ont fait confiance section */}
-      <section className="py-16 md:py-20 animate-fade-in-up bg-gradient-to-br from-gray-50 to-gray-100">
+      <section className="py-16 md:py-20 animate-fade-in-up" style={{ backgroundColor: '#F4F4F4' }}>
         <div className="max-w-7xl mx-auto sm:px-12 lg:px-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 animate-text-reveal">
@@ -181,36 +206,36 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
           {/* Desktop Logo Grid */}
           <div className="hidden md:grid grid-cols-5 gap-8 lg:gap-12 items-center justify-items-center">
             {/* Row 1 */}
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-100 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-100 hover:scale-110 transition-transform duration-300">
               <img src={img1} alt="Logo 1" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-200 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-200 hover:scale-110 transition-transform duration-300">
               <img src={img2} alt="Logo 2" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-300 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-300 hover:scale-110 transition-transform duration-300">
               <img src={img3} alt="Logo 3" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-400 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-400 hover:scale-110 transition-transform duration-300">
               <img src={img4} alt="Logo 4" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-500 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-500 hover:scale-110 transition-transform duration-300">
               <img src={img5} alt="Logo 5" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
 
             {/* Row 2 */}
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-600 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-600 hover:scale-110 transition-transform duration-300">
               <img src={img6} alt="Logo 6" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-700 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-700 hover:scale-110 transition-transform duration-300">
               <img src={img7} alt="Logo 7" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-800 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-800 hover:scale-110 transition-transform duration-300">
               <img src={img8} alt="Logo 8" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-900 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-900 hover:scale-110 transition-transform duration-300">
               <img src={img9} alt="Logo 9" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-1000 hover:scale-110 transition-transform duration-300 shadow-md">
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-1000 hover:scale-110 transition-transform duration-300">
               <img src={img10} alt="Logo 10" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
           </div>
@@ -220,68 +245,68 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             <div className="flex animate-scroll space-x-6 w-max">
               {/* First set of logos */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img1} alt="Logo 1" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img2} alt="Logo 2" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img3} alt="Logo 3" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img4} alt="Logo 4" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img5} alt="Logo 5" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img6} alt="Logo 6" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img7} alt="Logo 7" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img8} alt="Logo 8" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img9} alt="Logo 9" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img10} alt="Logo 10" className="object-contain w-20 h-20" />
                 </div>
               </div>
               
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img1} alt="Logo 1" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img2} alt="Logo 2" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img3} alt="Logo 3" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img4} alt="Logo 4" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img5} alt="Logo 5" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img6} alt="Logo 6" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img7} alt="Logo 7" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img8} alt="Logo 8" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img9} alt="Logo 9" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-md">
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
                   <img src={img10} alt="Logo 10" className="object-contain w-20 h-20" />
                 </div>
               </div>
@@ -291,12 +316,12 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
       </section>
 
       {/* Testimonials section */}
-      <section className="py-16 md:py-20 animate-fade-in-up bg-white">
+      <section className="py-16 md:py-20 animate-fade-in-up" style={{ backgroundColor: '#0A090F' }}>
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4 animate-text-reveal">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 animate-text-reveal">
               Apprécié par des centaines de{' '}
-              <span className="bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent animate-gradient-text">
+              <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
                 clients
               </span>
             </h2>
@@ -305,7 +330,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
           {/* Desktop testimonials grid */}
           <div className="hidden md:grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {/* Testimonial 1 */}
-            <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in-up animation-delay-100 hover:scale-105">
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up animation-delay-100 hover:scale-105">
               <div className="flex mb-6">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
@@ -327,7 +352,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in-up animation-delay-200 hover:scale-105">
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up animation-delay-200 hover:scale-105">
               <div className="flex mb-6">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
@@ -349,7 +374,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 border border-gray-200 hover:shadow-lg transition-all duration-300 animate-fade-in-up animation-delay-300 hover:scale-105">
+            <div className="bg-white rounded-2xl p-8 border border-gray-100 hover:shadow-lg transition-all duration-300 animate-fade-in-up animation-delay-300 hover:scale-105">
               <div className="flex mb-6">
                 {[...Array(5)].map((_, i) => (
                   <svg key={i} width="20" height="20" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
@@ -376,7 +401,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             <div className="flex animate-scroll space-x-6 w-max">
               {/* First set */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-200 hover:scale-105 transition-transform duration-300 shadow-md">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
@@ -397,7 +422,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                   <p className="font-semibold text-gray-900 text-sm">Marie Dubois</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-200 hover:scale-105 transition-transform duration-300 shadow-md">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
@@ -418,7 +443,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                   <p className="font-semibold text-gray-900 text-sm">Pierre Martin</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-200 hover:scale-105 transition-transform duration-300 shadow-md">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
@@ -442,7 +467,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
 
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-200 hover:scale-105 transition-transform duration-300 shadow-md">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
@@ -463,7 +488,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                   <p className="font-semibold text-gray-900 text-sm">Marie Dubois</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-200 hover:scale-105 transition-transform duration-300 shadow-md">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
@@ -484,7 +509,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                   <p className="font-semibold text-gray-900 text-sm">Pierre Martin</p>
                 </div>
 
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-200 hover:scale-105 transition-transform duration-300 shadow-md">
+                <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
                   <div className="flex mb-4">
                     {[...Array(5)].map((_, i) => (
                       <svg key={i} width="18" height="18" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1 animate-star-twinkle" style={{ animationDelay: `${i * 0.1}s` }}>
