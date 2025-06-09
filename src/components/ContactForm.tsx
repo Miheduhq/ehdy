@@ -124,7 +124,7 @@ const ContactForm: React.FC = () => {
         footer: {
           text: "Hedy Agency - Nouveau lead"
         }
-      ];
+      };
 
       if (formData.features.length > 0) {
         embed.fields.push({
