@@ -19,7 +19,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-22\" style={{ backgroundColor: '#0A090F' }}>
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-22" style={{ backgroundColor: '#0A090F' }}>
         {/* Background Gradient Texture */}
         <div className="absolute inset-0">
           <svg 
@@ -205,37 +205,67 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
           {/* Desktop Logo Grid */}
           <div className="hidden md:grid grid-cols-5 gap-8 lg:gap-12 items-center justify-items-center">
             {/* Row 1 */}
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-100 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/ds1fbr5w/1.png" alt="Logo 1" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-100 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-gray-800 mb-1">LB</div>
+                <div className="text-xs text-gray-600">Boulangerie</div>
+              </div>
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-200 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/q3DGrtjB/2.png" alt="Logo 2" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-200 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-blue-600 mb-1">MC</div>
+                <div className="text-xs text-gray-600">Conseil</div>
+              </div>
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-300 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/JV2nnCH/3.png" alt="Logo 3" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-300 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-green-600 mb-1">VB</div>
+                <div className="text-xs text-gray-600">Garage</div>
+              </div>
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-400 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/Tq8Jx8b7/4.png" alt="Logo 4" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-400 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-purple-600 mb-1">SL</div>
+                <div className="text-xs text-gray-600">Coiffure</div>
+              </div>
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-500 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/SDvj8WCX/5.png" alt="Logo 5" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-500 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-red-600 mb-1">RG</div>
+                <div className="text-xs text-gray-600">Restaurant</div>
+              </div>
             </div>
 
             {/* Row 2 */}
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-600 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/zW0q9nR6/6.png" alt="Logo 6" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-600 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-indigo-600 mb-1">PM</div>
+                <div className="text-xs text-gray-600">Avocat</div>
+              </div>
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-700 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/b50YRtBc/7.png" alt="Logo 7" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-700 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-teal-600 mb-1">AB</div>
+                <div className="text-xs text-gray-600">Artisan</div>
+              </div>
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-800 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/gbzH6XrF/8.png" alt="Logo 8" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-800 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-orange-600 mb-1">CF</div>
+                <div className="text-xs text-gray-600">Fleuriste</div>
+              </div>
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-900 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/B5Yj0Zvx/9.png" alt="Logo 9" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-900 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-pink-600 mb-1">EB</div>
+                <div className="text-xs text-gray-600">Beauté</div>
+              </div>
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-1000 hover:scale-110 transition-transform duration-300">
-              <img src="https://i.ibb.co/mr86DGQ3/10.png" alt="Logo 10" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
+            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-1000 hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-cyan-600 mb-1">DT</div>
+                <div className="text-xs text-gray-600">Dentiste</div>
+              </div>
             </div>
           </div>
 
@@ -244,69 +274,129 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             <div className="flex animate-scroll space-x-6 w-max">
               {/* First set of logos */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/ds1fbr5w/1.png" alt="Logo 1" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-gray-800 mb-1">LB</div>
+                    <div className="text-xs text-gray-600">Boulangerie</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/q3DGrtjB/2.png" alt="Logo 2" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-600 mb-1">MC</div>
+                    <div className="text-xs text-gray-600">Conseil</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/JV2nnCH/3.png" alt="Logo 3" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-green-600 mb-1">VB</div>
+                    <div className="text-xs text-gray-600">Garage</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/Tq8Jx8b7/4.png" alt="Logo 4" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-purple-600 mb-1">SL</div>
+                    <div className="text-xs text-gray-600">Coiffure</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/SDvj8WCX/5.png" alt="Logo 5" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-red-600 mb-1">RG</div>
+                    <div className="text-xs text-gray-600">Restaurant</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/zW0q9nR6/6.png" alt="Logo 6" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-indigo-600 mb-1">PM</div>
+                    <div className="text-xs text-gray-600">Avocat</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/b50YRtBc/7.png" alt="Logo 7" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-teal-600 mb-1">AB</div>
+                    <div className="text-xs text-gray-600">Artisan</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/gbzH6XrF/8.png" alt="Logo 8" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-orange-600 mb-1">CF</div>
+                    <div className="text-xs text-gray-600">Fleuriste</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/B5Yj0Zvx/9.png" alt="Logo 9" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-pink-600 mb-1">EB</div>
+                    <div className="text-xs text-gray-600">Beauté</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/mr86DGQ3/10.png" alt="Logo 10" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-cyan-600 mb-1">DT</div>
+                    <div className="text-xs text-gray-600">Dentiste</div>
+                  </div>
                 </div>
               </div>
               
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/ds1fbr5w/1.png" alt="Logo 1" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-gray-800 mb-1">LB</div>
+                    <div className="text-xs text-gray-600">Boulangerie</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/q3DGrtjB/2.png" alt="Logo 2" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-blue-600 mb-1">MC</div>
+                    <div className="text-xs text-gray-600">Conseil</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/JV2nnCH/3.png" alt="Logo 3" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-green-600 mb-1">VB</div>
+                    <div className="text-xs text-gray-600">Garage</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/Tq8Jx8b7/4.png" alt="Logo 4" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-purple-600 mb-1">SL</div>
+                    <div className="text-xs text-gray-600">Coiffure</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/SDvj8WCX/5.png" alt="Logo 5" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-red-600 mb-1">RG</div>
+                    <div className="text-xs text-gray-600">Restaurant</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/zW0q9nR6/6.png" alt="Logo 6" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-indigo-600 mb-1">PM</div>
+                    <div className="text-xs text-gray-600">Avocat</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/b50YRtBc/7.png" alt="Logo 7" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-teal-600 mb-1">AB</div>
+                    <div className="text-xs text-gray-600">Artisan</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/gbzH6XrF/8.png" alt="Logo 8" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-orange-600 mb-1">CF</div>
+                    <div className="text-xs text-gray-600">Fleuriste</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/B5Yj0Zvx/9.png" alt="Logo 9" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-pink-600 mb-1">EB</div>
+                    <div className="text-xs text-gray-600">Beauté</div>
+                  </div>
                 </div>
-                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
-                  <img src="https://i.ibb.co/mr86DGQ3/10.png" alt="Logo 10" className="object-contain w-20 h-20" />
+                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
+                  <div className="text-center">
+                    <div className="text-lg font-bold text-cyan-600 mb-1">DT</div>
+                    <div className="text-xs text-gray-600">Dentiste</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -319,7 +409,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 animate-text-reveal">
-              Apprécié par des milliers de{' '}
+              Apprécié par des centaines de{' '}
               <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
                 clients
               </span>
@@ -345,7 +435,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 ))}
               </div>
               <p className="text-gray-800 mb-6 leading-relaxed text-base">
-                Site vitrine parfait pour notre entreprise. Design moderne et professionnel qui reflète parfaitement notre image de marque.
+                Site vitrine parfait pour notre restaurant. Design moderne et professionnel qui reflète parfaitement notre image de marque. Nos clients trouvent facilement nos informations.
               </p>
               <p className="font-semibold text-gray-900 text-sm">Marie Dubois - Restaurant Le Gourmet</p>
             </div>
@@ -367,7 +457,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 ))}
               </div>
               <p className="text-gray-800 mb-6 leading-relaxed text-base">
-                Excellent service ! Notre site vitrine a été livré en 24h comme promis. L'équipe est très professionnelle et à l'écoute.
+                Excellent service ! Notre site vitrine a été livré en 24h comme promis. L'équipe est très professionnelle et à l'écoute. Nos nouveaux clients nous trouvent facilement maintenant.
               </p>
               <p className="font-semibold text-gray-900 text-sm">Pierre Martin - Cabinet d'Avocat</p>
             </div>
@@ -389,7 +479,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 ))}
               </div>
               <p className="text-gray-800 mb-6 leading-relaxed text-base">
-                Rapport qualité-prix imbattable ! Pour 100€/mois, nous avons un site vitrine complet avec maintenance incluse. Je recommande !
+                Rapport qualité-prix imbattable ! Pour 100€/mois, nous avons un site vitrine complet avec maintenance incluse. Je recommande vivement cette solution !
               </p>
               <p className="font-semibold text-gray-900 text-sm">Sophie Laurent - Salon de Coiffure</p>
             </div>
@@ -416,7 +506,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                     ))}
                   </div>
                   <p className="text-gray-800 mb-4 leading-relaxed text-sm">
-                    Site vitrine parfait pour notre entreprise. Design moderne et professionnel qui reflète parfaitement notre image de marque.
+                    Site vitrine parfait pour notre restaurant. Design moderne et professionnel qui reflète parfaitement notre image de marque.
                   </p>
                   <p className="font-semibold text-gray-900 text-sm">Marie Dubois</p>
                 </div>
@@ -482,7 +572,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                     ))}
                   </div>
                   <p className="text-gray-800 mb-4 leading-relaxed text-sm">
-                    Site vitrine parfait pour notre entreprise. Design moderne et professionnel qui reflète parfaitement notre image de marque.
+                    Site vitrine parfait pour notre restaurant. Design moderne et professionnel qui reflète parfaitement notre image de marque.
                   </p>
                   <p className="font-semibold text-gray-900 text-sm">Marie Dubois</p>
                 </div>
