@@ -19,7 +19,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-22\" style={{ backgroundColor: '#0A090F' }}>
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-22" style={{ backgroundColor: '#0A090F' }}>
         {/* Background Gradient Texture */}
         <div className="absolute inset-0">
           <svg 
@@ -206,67 +206,37 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
           {/* Desktop Logo Grid */}
           <div className="hidden md:grid grid-cols-5 gap-8 lg:gap-12 items-center justify-items-center">
             {/* Row 1 */}
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-100 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-gray-800 mb-1">LB</div>
-                <div className="text-xs text-gray-600">Boulangerie</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-100 hover:scale-110 transition-transform duration-300">
+              <img src={img1} alt="Logo 1" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-200 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600 mb-1">MC</div>
-                <div className="text-xs text-gray-600">Conseil</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-200 hover:scale-110 transition-transform duration-300">
+              <img src={img2} alt="Logo 2" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-300 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-green-600 mb-1">VB</div>
-                <div className="text-xs text-gray-600">Garage</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-300 hover:scale-110 transition-transform duration-300">
+              <img src={img3} alt="Logo 3" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-400 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-purple-600 mb-1">SL</div>
-                <div className="text-xs text-gray-600">Coiffure</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-400 hover:scale-110 transition-transform duration-300">
+              <img src={img4} alt="Logo 4" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-500 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-red-600 mb-1">RG</div>
-                <div className="text-xs text-gray-600">Restaurant</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-500 hover:scale-110 transition-transform duration-300">
+              <img src={img5} alt="Logo 5" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
 
             {/* Row 2 */}
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-600 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-indigo-600 mb-1">PM</div>
-                <div className="text-xs text-gray-600">Avocat</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-600 hover:scale-110 transition-transform duration-300">
+              <img src={img6} alt="Logo 6" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-700 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-teal-600 mb-1">AB</div>
-                <div className="text-xs text-gray-600">Artisan</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-700 hover:scale-110 transition-transform duration-300">
+              <img src={img7} alt="Logo 7" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-800 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-orange-600 mb-1">CF</div>
-                <div className="text-xs text-gray-600">Fleuriste</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-800 hover:scale-110 transition-transform duration-300">
+              <img src={img8} alt="Logo 8" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-900 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-pink-600 mb-1">EB</div>
-                <div className="text-xs text-gray-600">Beauté</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-900 hover:scale-110 transition-transform duration-300">
+              <img src={img9} alt="Logo 9" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
-            <div className="w-24 h-24 lg:w-28 lg:h-28 bg-white rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-1000 hover:scale-110 transition-transform duration-300 shadow-sm">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-cyan-600 mb-1">DT</div>
-                <div className="text-xs text-gray-600">Dentiste</div>
-              </div>
+            <div className="w-24 h-24 lg:w-28 lg:h-28 rounded-lg flex items-center justify-center animate-fade-in-up animation-delay-1000 hover:scale-110 transition-transform duration-300">
+              <img src={img10} alt="Logo 10" className="object-contain w-20 h-20 lg:w-24 lg:h-24" />
             </div>
           </div>
 
@@ -275,129 +245,69 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             <div className="flex animate-scroll space-x-6 w-max">
               {/* First set of logos */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-gray-800 mb-1">LB</div>
-                    <div className="text-xs text-gray-600">Boulangerie</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img1} alt="Logo 1" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600 mb-1">MC</div>
-                    <div className="text-xs text-gray-600">Conseil</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img2} alt="Logo 2" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-green-600 mb-1">VB</div>
-                    <div className="text-xs text-gray-600">Garage</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img3} alt="Logo 3" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600 mb-1">SL</div>
-                    <div className="text-xs text-gray-600">Coiffure</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img4} alt="Logo 4" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-red-600 mb-1">RG</div>
-                    <div className="text-xs text-gray-600">Restaurant</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img5} alt="Logo 5" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-indigo-600 mb-1">PM</div>
-                    <div className="text-xs text-gray-600">Avocat</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img6} alt="Logo 6" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-teal-600 mb-1">AB</div>
-                    <div className="text-xs text-gray-600">Artisan</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img7} alt="Logo 7" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-orange-600 mb-1">CF</div>
-                    <div className="text-xs text-gray-600">Fleuriste</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img8} alt="Logo 8" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-pink-600 mb-1">EB</div>
-                    <div className="text-xs text-gray-600">Beauté</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img9} alt="Logo 9" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-600 mb-1">DT</div>
-                    <div className="text-xs text-gray-600">Dentiste</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img10} alt="Logo 10" className="object-contain w-20 h-20" />
                 </div>
               </div>
               
               {/* Duplicate set for seamless loop */}
               <div className="flex space-x-6 flex-shrink-0">
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-gray-800 mb-1">LB</div>
-                    <div className="text-xs text-gray-600">Boulangerie</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img1} alt="Logo 1" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-blue-600 mb-1">MC</div>
-                    <div className="text-xs text-gray-600">Conseil</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img2} alt="Logo 2" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-green-600 mb-1">VB</div>
-                    <div className="text-xs text-gray-600">Garage</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img3} alt="Logo 3" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-purple-600 mb-1">SL</div>
-                    <div className="text-xs text-gray-600">Coiffure</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img4} alt="Logo 4" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-red-600 mb-1">RG</div>
-                    <div className="text-xs text-gray-600">Restaurant</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img5} alt="Logo 5" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-indigo-600 mb-1">PM</div>
-                    <div className="text-xs text-gray-600">Avocat</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img6} alt="Logo 6" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-teal-600 mb-1">AB</div>
-                    <div className="text-xs text-gray-600">Artisan</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img7} alt="Logo 7" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-orange-600 mb-1">CF</div>
-                    <div className="text-xs text-gray-600">Fleuriste</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img8} alt="Logo 8" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-pink-600 mb-1">EB</div>
-                    <div className="text-xs text-gray-600">Beauté</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img9} alt="Logo 9" className="object-contain w-20 h-20" />
                 </div>
-                <div className="w-20 h-20 bg-white rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 shadow-sm">
-                  <div className="text-center">
-                    <div className="text-lg font-bold text-cyan-600 mb-1">DT</div>
-                    <div className="text-xs text-gray-600">Dentiste</div>
-                  </div>
+                <div className="w-20 h-20 bg-gray-300 rounded-lg flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300">
+                  <img src={img10} alt="Logo 10" className="object-contain w-20 h-20" />
                 </div>
               </div>
             </div>
