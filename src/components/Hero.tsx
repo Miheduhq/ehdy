@@ -76,7 +76,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               fontFamily: 'Inter',
               letterSpacing: '-2px'
             }}>
-              Votre site vitrine en{' '}
+              Votre site vitrine{' '}
               <span className="animate-gradient-text" style={{
                 background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
                 backgroundClip: 'text',
@@ -84,10 +84,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 WebkitTextFillColor: 'transparent',
                 fontWeight: '700'
               }}>
-                24h
+                professionnel
               </span>
               <br />
-              à partir de{' '}
+              en 24h dès{' '}
               <span className="animate-gradient-text" style={{
                 background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
                 backgroundClip: 'text',
@@ -101,29 +101,29 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 leading-relaxed font-inter max-w-xl lg:max-w-2xl animate-fade-in-up animation-delay-200">
-              Créez votre site vitrine professionnel avec notre solution tout-en-un. 
-              Design moderne, développement rapide, et maintenance incluse.
+              Créez votre présence digitale avec notre solution tout-en-un. 
+              Design moderne, développement rapide, hébergement et maintenance inclus.
             </p>
 
             <button 
               onClick={openContactModal}
               className="bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl font-inter animate-fade-in-up animation-delay-400 hover:animate-pulse-gentle"
             >
-              Obtenir un{' '}
+              Obtenir mon{' '}
               <span style={{
                 background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
                 backgroundClip: 'text',
                 WebkitBackgroundClip: 'text',
                 WebkitTextFillColor: 'transparent'
               }}>
-                devis
+                devis gratuit
               </span>
             </button>
           </div>
         </div>
       </section>
 
-      {/* Make you grow, together section */}
+      {/* Votre succès digital section */}
       <section id="services" className="py-16 md:py-24 bg-white overflow-hidden">
         <div className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
@@ -139,29 +139,30 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             {/* Center Content */}
             <div className="lg:col-span-6 text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up">
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 animate-text-reveal">
-                Make you grow,{' '}
+                Votre succès digital{' '}
                 <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
-                  together
+                  commence ici
                 </span>
                 .
               </h2>
               
               <div className="text-gray-600 text-lg leading-relaxed mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
                 <p className="mb-4">
-                  Vous avez beaucoup à nous apprendre sur votre activité et votre marché.{' '}
+                  Vous connaissez votre métier mieux que personne.{' '}
                   <span className="font-semibold text-gray-900">
-                    Des infos précieuses qui méritent toute notre attention
+                    Cette expertise est précieuse pour créer votre site vitrine
                   </span>{' '}
-                  : parce qu'un site vitrine efficace, ça se construit ensemble.
+                  : parce qu'un site efficace, ça se construit ensemble.
                 </p>
                 
                 <p className="mb-4">
-                  C'est pour cela qu'un projet ne démarre jamais sans un vrai kick-off et que nous avons développé des méthodologies de{' '}
-                  <span className="font-semibold text-gray-900">co-construction</span>.
+                  C'est pourquoi chaque projet démarre par un échange approfondi et que nous avons développé une méthodologie de{' '}
+                  <span className="font-semibold text-gray-900">co-création</span>{' '}
+                  éprouvée.
                 </p>
                 
                 <p>
-                  Vous impliquer dans chaque étape du projet, c'est vous en donner une maîtrise totale.
+                  Vous impliquer à chaque étape, c'est vous garantir un site qui vous ressemble vraiment.
                 </p>
               </div>
 
@@ -175,7 +176,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                   background: 'linear-gradient(90deg, #D95DB0 0%, #3344DC 100%)'
                 }}
               >
-                Nous contacter
+                Démarrer mon projet
               </button>
             </div>
 
