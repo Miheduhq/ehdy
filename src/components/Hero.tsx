@@ -19,7 +19,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-32 overflow-hidden">
+      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-32 overflow-hidden">
         {/* Background Gradient Texture - Version blanche de l'illustration */}
         <div className="absolute inset-0 opacity-10">
           <svg 
