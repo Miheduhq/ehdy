@@ -44,9 +44,8 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               letterSpacing: '-2px'
             }}>
               Votre site clé en mains
-              <br />
               en 24h
-              <br />
+             
               <span style={{
                 color: '#0A090F',
                 fontFamily: 'Prompt, sans-serif',
