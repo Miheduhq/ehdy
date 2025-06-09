@@ -27,9 +27,9 @@ const Footer: React.FC = () => {
               </svg>
             </div>
             <p className="text-gray-300 mb-6 text-sm sm:text-base leading-relaxed max-w-md">
-              Nous créons des expériences web exceptionnelles qui transforment 
-              vos idées en succès numériques. Votre partenaire de confiance pour 
-              tous vos projets digitaux.
+              Nous créons des sites vitrines exceptionnels qui transforment 
+              votre présence en ligne en véritable outil de croissance. 
+              Votre partenaire de confiance pour votre réussite digitale.
             </p>
             
             {/* Social Links */}
@@ -67,26 +67,26 @@ const Footer: React.FC = () => {
 
           {/* Services Section */}
           <div className="sm:col-span-1 lg:col-span-1 animate-fade-in-up animation-delay-200">
-            <h3 className="text-white font-semibold mb-4 sm:mb-6 text-base sm:text-lg">Services</h3>
+            <h3 className="text-white font-semibold mb-4 sm:mb-6 text-base sm:text-lg">Nos Services</h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:translate-x-2 transform block">
-                  Développement Web
+                  Sites Vitrines
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:translate-x-2 transform block">
-                  Design UI/UX
+                  Design Web
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:translate-x-2 transform block">
-                  E-commerce
+                  Référencement SEO
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:translate-x-2 transform block">
-                  SEO
+                  Hébergement Web
                 </a>
               </li>
               <li>
@@ -99,7 +99,7 @@ const Footer: React.FC = () => {
 
           {/* Company Section */}
           <div className="sm:col-span-1 lg:col-span-1 animate-fade-in-up animation-delay-300">
-            <h3 className="text-white font-semibold mb-4 sm:mb-6 text-base sm:text-lg">Entreprise</h3>
+            <h3 className="text-white font-semibold mb-4 sm:mb-6 text-base sm:text-lg">L'Agence</h3>
             <ul className="space-y-2 sm:space-y-3">
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:translate-x-2 transform block">
@@ -108,12 +108,12 @@ const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:translate-x-2 transform block">
-                  Équipe
+                  Notre équipe
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-400 hover:text-white transition-all duration-300 text-sm sm:text-base hover:translate-x-2 transform block">
-                  Carrières
+                  Nos réalisations
                 </a>
               </li>
               <li>
@@ -131,13 +131,13 @@ const Footer: React.FC = () => {
 
           {/* Contact Section */}
           <div className="sm:col-span-2 lg:col-span-1 animate-fade-in-up animation-delay-400">
-            <h3 className="text-white font-semibold mb-4 sm:mb-6 text-base sm:text-lg">Contact</h3>
+            <h3 className="text-white font-semibold mb-4 sm:mb-6 text-base sm:text-lg">Nous Contacter</h3>
             <div className="space-y-3 sm:space-y-4">
               <div className="flex items-start space-x-3 hover:scale-105 transition-transform duration-300">
                 <Mail className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-400 text-sm sm:text-base">
-                    hello@hedyagency.com
+                    contact@hedyagency.fr
                   </p>
                 </div>
               </div>
@@ -155,7 +155,7 @@ const Footer: React.FC = () => {
                 <MapPin className="w-5 h-5 text-pink-500 mt-0.5 flex-shrink-0" />
                 <div>
                   <p className="text-gray-400 text-sm sm:text-base">
-                    123 Rue de la Tech<br />
+                    123 Avenue des Entrepreneurs<br />
                     75001 Paris, France
                   </p>
                 </div>
@@ -182,7 +182,7 @@ const Footer: React.FC = () => {
                 href="#" 
                 className="text-gray-400 hover:text-white text-xs sm:text-sm transition-all duration-300 hover:scale-110 transform"
               >
-                Conditions d'utilisation
+                Conditions générales
               </a>
               <a 
                 href="#" 

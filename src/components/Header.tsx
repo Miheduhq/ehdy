@@ -54,6 +54,12 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
               Services
             </button>
             <button 
+              onClick={() => scrollToSection('portfolio')}
+              className="text-white hover:text-pink-400 transition-all duration-300 text-sm xl:text-base font-medium hover:scale-110 transform"
+            >
+              Portfolio
+            </button>
+            <button 
               onClick={handleContactClick}
               className="text-white hover:text-pink-400 transition-all duration-300 text-sm xl:text-base font-medium hover:scale-110 transform"
             >
@@ -68,7 +74,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
               onClick={handleContactClick}
               className="hidden md:block bg-white text-gray-900 px-3 lg:px-4 xl:px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-all duration-300 text-xs lg:text-sm xl:text-base whitespace-nowrap hover:scale-105 transform hover:shadow-lg"
             >
-              Obtenir un devis
+              Devis gratuit
             </button>
             
             {/* Hand logo in white circle */}
@@ -109,6 +115,12 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
                   Services
                 </button>
                 <button 
+                  onClick={() => scrollToSection('portfolio')}
+                  className="text-white hover:text-pink-400 transition-all duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 text-left hover:scale-105 transform"
+                >
+                  Portfolio
+                </button>
+                <button 
                   onClick={handleContactClick}
                   className="text-white hover:text-pink-400 transition-all duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 text-left hover:scale-105 transform"
                 >
@@ -121,7 +133,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
                     onClick={handleContactClick}
                     className="w-full bg-white text-gray-900 px-4 py-3 rounded-lg font-medium hover:bg-gray-100 transition-all duration-300 text-sm hover:scale-105 transform hover:shadow-lg"
                   >
-                    Obtenir un devis
+                    Devis gratuit
                   </button>
                 </div>
               </nav>
