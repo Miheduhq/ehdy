@@ -12,11 +12,17 @@ import img10 from '../assets/10.png';
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8, img9, img10];
 
-
 const Hero: React.FC = () => {
+  const scrollToContact = () => {
+    const element = document.getElementById('contact');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <>
-      <section className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-22" style={{ backgroundColor: '#0A090F' }}>
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-22" style={{ backgroundColor: '#0A090F' }}>
         {/* Background Gradient Texture */}
         <div className="absolute inset-0">
           <svg 
@@ -102,7 +108,10 @@ const Hero: React.FC = () => {
               Design moderne, développement rapide, et maintenance incluse.
             </p>
 
-            <button className="bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl font-inter">
+            <button 
+              onClick={scrollToContact}
+              className="bg-white text-gray-900 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 hover:shadow-xl font-inter"
+            >
               Obtenir un{' '}
               <span style={{
                 background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
@@ -118,7 +127,7 @@ const Hero: React.FC = () => {
       </section>
 
       {/* Make you grow, together section */}
-      <section className="py-16 md:py-24 bg-white overflow-hidden">
+      <section id="services" className="py-16 md:py-24 bg-white overflow-hidden">
         <div className="relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-0 items-center">
             {/* Left Image - Desktop only */}
@@ -160,6 +169,7 @@ const Hero: React.FC = () => {
               </div>
 
               <button 
+                onClick={scrollToContact}
                 className="inline-flex items-center justify-center text-white font-semibold rounded-full transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
                 style={{
                   width: '252px',

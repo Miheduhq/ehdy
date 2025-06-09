@@ -7,6 +7,14 @@ interface HeaderProps {
 }
 
 const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setIsMenuOpen(false);
+  };
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-7">
@@ -27,36 +35,33 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
 
           {/* Navigation - Desktop */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <a 
-              href="#accueil" 
+            <button 
+              onClick={() => scrollToSection('accueil')}
               className="text-white hover:text-pink-400 transition-colors duration-300 text-sm xl:text-base font-medium"
             >
               Accueil
-            </a>
-            <a 
-              href="#services" 
+            </button>
+            <button 
+              onClick={() => scrollToSection('services')}
               className="text-white hover:text-pink-400 transition-colors duration-300 text-sm xl:text-base font-medium"
             >
               Services
-            </a>
-            <a 
-              href="#portfolio" 
-              className="text-white hover:text-pink-400 transition-colors duration-300 text-sm xl:text-base font-medium"
-            >
-              Portfolio
-            </a>
-            <a 
-              href="#contact" 
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')}
               className="text-white hover:text-pink-400 transition-colors duration-300 text-sm xl:text-base font-medium"
             >
               Contact
-            </a>
+            </button>
           </nav>
 
           {/* Right side buttons */}
           <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
             {/* CTA Button - Hidden on small screens, visible on medium+ */}
-            <button className="hidden md:block bg-white text-gray-900 px-3 lg:px-4 xl:px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors duration-300 text-xs lg:text-sm xl:text-base whitespace-nowrap">
+            <button 
+              onClick={() => scrollToSection('contact')}
+              className="hidden md:block bg-white text-gray-900 px-3 lg:px-4 xl:px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors duration-300 text-xs lg:text-sm xl:text-base whitespace-nowrap"
+            >
               1h de conseil gratuit
             </button>
             
@@ -85,40 +90,30 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           <div className="lg:hidden">
             <div className="px-2 pt-4 pb-6 space-y-1 bg-black/20 backdrop-blur-md rounded-lg mt-4 border border-white/10">
               <nav className="flex flex-col space-y-3">
-                <a 
-                  href="#accueil" 
-                  className="text-white hover:text-pink-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10"
-                  onClick={() => setIsMenuOpen(false)}
+                <button 
+                  onClick={() => scrollToSection('accueil')}
+                  className="text-white hover:text-pink-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 text-left"
                 >
                   Accueil
-                </a>
-                <a 
-                  href="#services" 
-                  className="text-white hover:text-pink-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10"
-                  onClick={() => setIsMenuOpen(false)}
+                </button>
+                <button 
+                  onClick={() => scrollToSection('services')}
+                  className="text-white hover:text-pink-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 text-left"
                 >
                   Services
-                </a>
-                <a 
-                  href="#portfolio" 
-                  className="text-white hover:text-pink-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Portfolio
-                </a>
-                <a 
-                  href="#contact" 
-                  className="text-white hover:text-pink-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10"
-                  onClick={() => setIsMenuOpen(false)}
+                </button>
+                <button 
+                  onClick={() => scrollToSection('contact')}
+                  className="text-white hover:text-pink-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 text-left"
                 >
                   Contact
-                </a>
+                </button>
                 
                 {/* Mobile CTA Button */}
                 <div className="pt-3 border-t border-white/20">
                   <button 
+                    onClick={() => scrollToSection('contact')}
                     className="w-full bg-white text-gray-900 px-4 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300 text-sm"
-                    onClick={() => setIsMenuOpen(false)}
                   >
                     1h de conseil gratuit
                   </button>
