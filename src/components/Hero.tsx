@@ -19,7 +19,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52\" style={{ 
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52" style={{ 
         background: 'linear-gradient(135deg, #FFFFD6 0%, #FFFFFF 100%)'
       }}>
         {/* Subtle pattern overlay inspired by the image */}
@@ -33,34 +33,31 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
 
         <div className="relative z-10 w-full px-4 sm:px-6 py-8 sm:py-52">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-gray-900 leading-tight mb-8 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-medium animate-fade-in-up" style={{
-              fontFamily: 'Inter',
+            <h1 className="leading-tight mb-8 animate-fade-in-up" style={{
+              color: '#0A090F',
+              textAlign: 'center',
+              fontFamily: 'Prompt, sans-serif',
+              fontSize: 'clamp(60px, 8vw, 100px)',
+              fontStyle: 'normal',
+              fontWeight: '700',
+              lineHeight: '110px',
               letterSpacing: '-2px'
             }}>
-              Votre site{' '}
-              <span className="animate-gradient-text" style={{
-                background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                fontWeight: '700'
-              }}>
-                clé en mains
-              </span>
+              Votre site clé en mains
               <br />
               en 24h
               <br />
-              À partir de{' '}
-              <span className="animate-gradient-text" style={{
-                background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
-                backgroundClip: 'text',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                fontWeight: '700'
+              <span style={{
+                color: '#0A090F',
+                fontFamily: 'Prompt, sans-serif',
+                fontSize: 'clamp(48px, 6.4vw, 80px)',
+                fontStyle: 'normal',
+                fontWeight: '400',
+                lineHeight: '110px',
+                letterSpacing: '-4px'
               }}>
-                100€
-              </span>{' '}
-              par mois
+                À partir de 100€ par mois
+              </span>
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 leading-relaxed font-inter max-w-2xl mx-auto animate-fade-in-up animation-delay-200">

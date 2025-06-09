@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         'inter': ['Inter', 'sans-serif'],
+        'prompt': ['Prompt', 'sans-serif'],
       },
     },
   },
