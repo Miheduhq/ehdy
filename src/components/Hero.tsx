@@ -43,7 +43,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               lineHeight: '110px',
               letterSpacing: '-2px'
             }}>
-              Votre site clé en mains en 24h
+              Votre site clé en mains en 24h 
              
               <span style={{
                 color: '#0A090F',
