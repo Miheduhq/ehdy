@@ -35,27 +35,27 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const projectTypes = [
-    'Site vitrine',
-    'E-commerce',
-    'Application web',
-    'Refonte de site existant',
+    'Site vitrine classique',
+    'Site vitrine premium',
     'Landing page',
-    'Blog/Magazine',
-    'Portfolio',
+    'Site portfolio',
+    'Site institutionnel',
+    'Refonte de site vitrine',
+    'Site événementiel',
     'Autre'
   ];
 
   const featureOptions = [
     'Design responsive',
     'SEO optimisé',
-    'Système de paiement',
-    'Espace membre',
+    'Formulaire de contact',
+    'Galerie photos',
     'Blog intégré',
     'Multilingue',
-    'Réservation en ligne',
-    'Chat en direct',
-    'Analytics avancés',
-    'API tierces'
+    'Google Maps',
+    'Réseaux sociaux',
+    'Analytics',
+    'Chat en direct'
   ];
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -84,7 +84,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
       const webhookUrl = 'https://discord.com/api/webhooks/1381351238444257371/eHCrUI0NJ_4lhkXZ1eaiP7-X-4VcxfK_VH8nWzLQ9aLcbU-nYice94Oo2rC_0XeAI532';
       
       const embed = {
-        title: "🚀 Nouvelle demande de projet - Site en 24h pour 100€/mois",
+        title: "🚀 Nouvelle demande de site vitrine - À partir de 100€/mois",
         color: 0xD95DB0,
         fields: [
           {
@@ -176,13 +176,13 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           <div className="flex items-center justify-between mb-6 animate-slide-down">
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
-                Votre site en{' '}
+                Votre site vitrine en{' '}
                 <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
                   24h
                 </span>
               </h2>
               <p className="text-gray-600 mt-2">
-                Décrivez-nous votre projet et nous vous rappelons dans les 24h
+                À partir de 100€/mois - Design + Développement + Hébergement + Maintenance
               </p>
             </div>
             <button
@@ -200,7 +200,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
               <div>
                 <h3 className="font-semibold text-gray-900">Garantie de rappel sous 24h</h3>
                 <p className="text-sm text-gray-600">
-                  Notre équipe vous contactera dans les 24 heures pour discuter de votre projet et vous proposer une solution personnalisée.
+                  Notre équipe vous contactera dans les 24 heures pour discuter de votre site vitrine et vous proposer une solution personnalisée.
                 </p>
               </div>
             </div>
@@ -214,7 +214,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   Merci ! Votre demande a été envoyée avec succès.
                 </p>
                 <p className="text-green-700 text-sm">
-                  Nous vous recontacterons dans les 24 heures pour discuter de votre projet.
+                  Nous vous recontacterons dans les 24 heures pour discuter de votre site vitrine.
                 </p>
               </div>
             </div>
@@ -302,12 +302,12 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             <div className="animate-fade-in-up animation-delay-400">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                 <Globe className="w-5 h-5 mr-2 text-pink-500" />
-                Votre projet
+                Votre site vitrine
               </h3>
               
               <div className="mb-4">
                 <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
-                  Type de projet *
+                  Type de site vitrine *
                 </label>
                 <select
                   id="projectType"
@@ -326,7 +326,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
 
               <div className="mb-4">
                 <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
-                  Description du projet *
+                  Description de votre activité *
                 </label>
                 <textarea
                   id="description"
@@ -336,14 +336,14 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   value={formData.description}
                   onChange={handleInputChange}
                   className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
-                  placeholder="Décrivez votre projet, vos objectifs, votre cible..."
+                  placeholder="Décrivez votre activité, vos services, votre cible..."
                 />
               </div>
 
               {/* Fonctionnalités */}
               <div className="mb-4">
                 <label className="block text-sm font-medium text-gray-700 mb-3">
-                  Fonctionnalités souhaitées
+                  Fonctionnalités souhaitées pour votre site vitrine
                 </label>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                   {featureOptions.map(feature => (
@@ -407,7 +407,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           <div className="mt-6 pt-6 border-t border-gray-200 animate-fade-in-up animation-delay-500">
             <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
               <div className="text-sm text-gray-500">
-                <p className="font-medium text-gray-700">Site en 24h pour 100€/mois</p>
+                <p className="font-medium text-gray-700">Site vitrine à partir de 100€/mois</p>
                 <p>Design + Développement + Hébergement + Maintenance inclus</p>
               </div>
               

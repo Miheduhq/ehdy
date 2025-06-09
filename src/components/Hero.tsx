@@ -76,7 +76,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               fontFamily: 'Inter',
               letterSpacing: '-2px'
             }}>
-              Votre site en{' '}
+              Votre site vitrine en{' '}
               <span className="animate-gradient-text" style={{
                 background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
                 backgroundClip: 'text',
@@ -87,7 +87,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 24h
               </span>
               <br />
-              pour{' '}
+              à partir de{' '}
               <span className="animate-gradient-text" style={{
                 background: 'linear-gradient(50deg, #D95DB0 -0.73%, #3344DC 365.51%)',
                 backgroundClip: 'text',
@@ -101,7 +101,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-300 mb-8 sm:mb-12 leading-relaxed font-inter max-w-xl lg:max-w-2xl animate-fade-in-up animation-delay-200">
-              Créez votre présence en ligne avec notre solution tout-en-un. 
+              Créez votre site vitrine professionnel avec notre solution tout-en-un. 
               Design moderne, développement rapide, et maintenance incluse.
             </p>
 
@@ -148,20 +148,20 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               
               <div className="text-gray-600 text-lg leading-relaxed mb-8 max-w-3xl mx-auto animate-fade-in-up animation-delay-200">
                 <p className="mb-4">
-                  Vous avez beaucoup à nous apprendre sur votre marché et votre offre.{' '}
+                  Vous avez beaucoup à nous apprendre sur votre activité et votre marché.{' '}
                   <span className="font-semibold text-gray-900">
                     Des infos précieuses qui méritent toute notre attention
                   </span>{' '}
-                  : parce qu'une solution digitale, ça se construit ensemble.
+                  : parce qu'un site vitrine efficace, ça se construit ensemble.
                 </p>
                 
                 <p className="mb-4">
-                  C'est pour cela qu'un projet ne démarre jamais sans un vrai kick-off et que nous avons développés des méthodologies de{' '}
+                  C'est pour cela qu'un projet ne démarre jamais sans un vrai kick-off et que nous avons développé des méthodologies de{' '}
                   <span className="font-semibold text-gray-900">co-construction</span>.
                 </p>
                 
                 <p>
-                  Vous impliquer dans chaque étape du projet, c'est vous en donner une maîtrise.
+                  Vous impliquer dans chaque étape du projet, c'est vous en donner une maîtrise totale.
                 </p>
               </div>
 
@@ -345,9 +345,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 ))}
               </div>
               <p className="text-gray-800 mb-6 leading-relaxed text-base">
-                Fait exactement ce qu'il dit. Facile à lire et à comprendre. C'est le deuxième iPhone sur lequel nous l'utilisons et nous recommandons vivement cette application.
+                Site vitrine parfait pour notre entreprise. Design moderne et professionnel qui reflète parfaitement notre image de marque.
               </p>
-              <p className="font-semibold text-gray-900 text-sm">colinandmandy94</p>
+              <p className="font-semibold text-gray-900 text-sm">Marie Dubois - Restaurant Le Gourmet</p>
             </div>
 
             {/* Testimonial 2 */}
@@ -367,9 +367,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 ))}
               </div>
               <p className="text-gray-800 mb-6 leading-relaxed text-base">
-                J'adore sa simplicité et son efficacité. Super application. Très informative et perspicace si vous souhaitez en savoir plus sur votre appareil. La vérification des violations de données est un vrai plus.
+                Excellent service ! Notre site vitrine a été livré en 24h comme promis. L'équipe est très professionnelle et à l'écoute.
               </p>
-              <p className="font-semibold text-gray-900 text-sm">Jennifer Black</p>
+              <p className="font-semibold text-gray-900 text-sm">Pierre Martin - Cabinet d'Avocat</p>
             </div>
 
             {/* Testimonial 3 */}
@@ -389,9 +389,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 ))}
               </div>
               <p className="text-gray-800 mb-6 leading-relaxed text-base">
-                Cette application est utile si vous avez besoin d'identifier certaines vulnérabilités sur votre iPhone. En cas de problème, leur service client s'est montré très serviable et réactif.
+                Rapport qualité-prix imbattable ! Pour 100€/mois, nous avons un site vitrine complet avec maintenance incluse. Je recommande !
               </p>
-              <p className="font-semibold text-gray-900 text-sm">Phillip Colligan</p>
+              <p className="font-semibold text-gray-900 text-sm">Sophie Laurent - Salon de Coiffure</p>
             </div>
           </div>
 
@@ -416,9 +416,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                     ))}
                   </div>
                   <p className="text-gray-800 mb-4 leading-relaxed text-sm">
-                    Fait exactement ce qu'il dit. Facile à lire et à comprendre. C'est le deuxième iPhone sur lequel nous l'utilisons et nous recommandons vivement cette application.
+                    Site vitrine parfait pour notre entreprise. Design moderne et professionnel qui reflète parfaitement notre image de marque.
                   </p>
-                  <p className="font-semibold text-gray-900 text-sm">colinandmandy94</p>
+                  <p className="font-semibold text-gray-900 text-sm">Marie Dubois</p>
                 </div>
 
                 <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
@@ -437,9 +437,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                     ))}
                   </div>
                   <p className="text-gray-800 mb-4 leading-relaxed text-sm">
-                    J'adore sa simplicité et son efficacité. Super application. Très informative et perspicace si vous souhaitez en savoir plus sur votre appareil.
+                    Excellent service ! Notre site vitrine a été livré en 24h comme promis. L'équipe est très professionnelle et à l'écoute.
                   </p>
-                  <p className="font-semibold text-gray-900 text-sm">Jennifer Black</p>
+                  <p className="font-semibold text-gray-900 text-sm">Pierre Martin</p>
                 </div>
 
                 <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
@@ -458,9 +458,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                     ))}
                   </div>
                   <p className="text-gray-800 mb-4 leading-relaxed text-sm">
-                    Cette application est utile si vous avez besoin d'identifier certaines vulnérabilités sur votre iPhone. En cas de problème, leur service client s'est montré très serviable.
+                    Rapport qualité-prix imbattable ! Pour 100€/mois, nous avons un site vitrine complet avec maintenance incluse.
                   </p>
-                  <p className="font-semibold text-gray-900 text-sm">Phillip Colligan</p>
+                  <p className="font-semibold text-gray-900 text-sm">Sophie Laurent</p>
                 </div>
               </div>
 
@@ -482,9 +482,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                     ))}
                   </div>
                   <p className="text-gray-800 mb-4 leading-relaxed text-sm">
-                    Fait exactement ce qu'il dit. Facile à lire et à comprendre. C'est le deuxième iPhone sur lequel nous l'utilisons et nous recommandons vivement cette application.
+                    Site vitrine parfait pour notre entreprise. Design moderne et professionnel qui reflète parfaitement notre image de marque.
                   </p>
-                  <p className="font-semibold text-gray-900 text-sm">colinandmandy94</p>
+                  <p className="font-semibold text-gray-900 text-sm">Marie Dubois</p>
                 </div>
 
                 <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
@@ -503,9 +503,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                     ))}
                   </div>
                   <p className="text-gray-800 mb-4 leading-relaxed text-sm">
-                    J'adore sa simplicité et son efficacité. Super application. Très informative et perspicace si vous souhaitez en savoir plus sur votre appareil.
+                    Excellent service ! Notre site vitrine a été livré en 24h comme promis. L'équipe est très professionnelle et à l'écoute.
                   </p>
-                  <p className="font-semibold text-gray-900 text-sm">Jennifer Black</p>
+                  <p className="font-semibold text-gray-900 text-sm">Pierre Martin</p>
                 </div>
 
                 <div className="bg-white rounded-2xl p-6 w-80 flex-shrink-0 border border-gray-100 hover:scale-105 transition-transform duration-300">
@@ -524,9 +524,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                     ))}
                   </div>
                   <p className="text-gray-800 mb-4 leading-relaxed text-sm">
-                    Cette application est utile si vous avez besoin d'identifier certaines vulnérabilités sur votre iPhone. En cas de problème, leur service client s'est montré très serviable.
+                    Rapport qualité-prix imbattable ! Pour 100€/mois, nous avons un site vitrine complet avec maintenance incluse.
                   </p>
-                  <p className="font-semibold text-gray-900 text-sm">Phillip Colligan</p>
+                  <p className="font-semibold text-gray-900 text-sm">Sophie Laurent</p>
                 </div>
               </div>
             </div>
