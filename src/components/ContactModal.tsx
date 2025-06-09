@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, User, Mail, Phone, Globe, Calendar, DollarSign, MessageSquare, CheckCircle, AlertCircle } from 'lucide-react';
+import { Send, User, Mail, Phone, Globe, MessageSquare, CheckCircle, AlertCircle, X, Clock } from 'lucide-react';
 
 interface FormData {
   name: string;
@@ -7,23 +7,24 @@ interface FormData {
   phone: string;
   company: string;
   projectType: string;
-  budget: string;
-  timeline: string;
   description: string;
   features: string[];
   hasExistingSite: string;
   currentSite: string;
 }
 
-const ContactForm: React.FC = () => {
+interface ContactModalProps {
+  isOpen: boolean;
+  onClose: () => void;
+}
+
+const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
     phone: '',
     company: '',
     projectType: '',
-    budget: '',
-    timeline: '',
     description: '',
     features: [],
     hasExistingSite: '',
@@ -42,24 +43,6 @@ const ContactForm: React.FC = () => {
     'Blog/Magazine',
     'Portfolio',
     'Autre'
-  ];
-
-  const budgetRanges = [
-    'Moins de 1 000€',
-    '1 000€ - 3 000€',
-    '3 000€ - 5 000€',
-    '5 000€ - 10 000€',
-    '10 000€ - 20 000€',
-    'Plus de 20 000€'
-  ];
-
-  const timelineOptions = [
-    'Urgent (moins d\'1 mois)',
-    '1-2 mois',
-    '2-3 mois',
-    '3-6 mois',
-    'Plus de 6 mois',
-    'Pas de contrainte'
   ];
 
   const featureOptions = [
@@ -101,7 +84,7 @@ const ContactForm: React.FC = () => {
       const webhookUrl = 'https://discord.com/api/webhooks/1381351238444257371/eHCrUI0NJ_4lhkXZ1eaiP7-X-4VcxfK_VH8nWzLQ9aLcbU-nYice94Oo2rC_0XeAI532';
       
       const embed = {
-        title: "🚀 Nouvelle demande de projet",
+        title: "🚀 Nouvelle demande de projet - Site en 24h pour 100€/mois",
         color: 0xD95DB0,
         fields: [
           {
@@ -111,7 +94,7 @@ const ContactForm: React.FC = () => {
           },
           {
             name: "🎯 Détails du projet",
-            value: `**Type:** ${formData.projectType}\n**Budget:** ${formData.budget}\n**Délai:** ${formData.timeline}`,
+            value: `**Type:** ${formData.projectType}`,
             inline: false
           },
           {
@@ -122,7 +105,7 @@ const ContactForm: React.FC = () => {
         ],
         timestamp: new Date().toISOString(),
         footer: {
-          text: "Hedy Agency - Nouveau lead"
+          text: "Hedy Agency - Rappel client dans les 24h"
         }
       };
 
@@ -160,8 +143,6 @@ const ContactForm: React.FC = () => {
           phone: '',
           company: '',
           projectType: '',
-          budget: '',
-          timeline: '',
           description: '',
           features: [],
           hasExistingSite: '',
@@ -178,34 +159,69 @@ const ContactForm: React.FC = () => {
     }
   };
 
-  return (
-    <section id="contact" className="py-16 md:py-24" style={{ backgroundColor: '#F4F4F4' }}>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-            Parlons de votre{' '}
-            <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
-              projet
-            </span>
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Décrivez-nous votre vision et nous vous accompagnerons dans sa réalisation. 
-            Plus vous nous en direz, mieux nous pourrons vous conseiller.
-          </p>
-        </div>
+  if (!isOpen) return null;
 
-        <div className="bg-white rounded-2xl shadow-xl p-6 md:p-8 lg:p-10">
-          {submitStatus === 'success' && (
-            <div className="mb-8 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-3">
-              <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-              <p className="text-green-800">
-                Merci ! Votre demande a été envoyée avec succès. Nous vous recontacterons dans les plus brefs délais.
+  return (
+    <div className="fixed inset-0 z-50 overflow-y-auto">
+      <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+        {/* Background overlay */}
+        <div 
+          className="fixed inset-0 transition-opacity bg-black bg-opacity-75"
+          onClick={onClose}
+        ></div>
+
+        {/* Modal */}
+        <div className="inline-block w-full max-w-4xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl sm:my-16">
+          {/* Header */}
+          <div className="flex items-center justify-between mb-6">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
+                Votre site en{' '}
+                <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent">
+                  24h
+                </span>
+              </h2>
+              <p className="text-gray-600 mt-2">
+                Décrivez-nous votre projet et nous vous rappelons dans les 24h
               </p>
+            </div>
+            <button
+              onClick={onClose}
+              className="p-2 text-gray-400 hover:text-gray-600 transition-colors"
+            >
+              <X size={24} />
+            </button>
+          </div>
+
+          {/* Guarantee Banner */}
+          <div className="mb-6 p-4 bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 rounded-lg">
+            <div className="flex items-center space-x-3">
+              <Clock className="w-6 h-6 text-pink-500 flex-shrink-0" />
+              <div>
+                <h3 className="font-semibold text-gray-900">Garantie de rappel sous 24h</h3>
+                <p className="text-sm text-gray-600">
+                  Notre équipe vous contactera dans les 24 heures pour discuter de votre projet et vous proposer une solution personnalisée.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {submitStatus === 'success' && (
+            <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center space-x-3">
+              <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+              <div>
+                <p className="text-green-800 font-medium">
+                  Merci ! Votre demande a été envoyée avec succès.
+                </p>
+                <p className="text-green-700 text-sm">
+                  Nous vous recontacterons dans les 24 heures pour discuter de votre projet.
+                </p>
+              </div>
             </div>
           )}
 
           {submitStatus === 'error' && (
-            <div className="mb-8 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center space-x-3">
+            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center space-x-3">
               <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
               <p className="text-red-800">
                 Une erreur s'est produite lors de l'envoi. Veuillez réessayer ou nous contacter directement.
@@ -213,14 +229,14 @@ const ContactForm: React.FC = () => {
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-8">
+          <form onSubmit={handleSubmit} className="space-y-6 max-h-96 overflow-y-auto pr-2">
             {/* Informations personnelles */}
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                 <User className="w-5 h-5 mr-2 text-pink-500" />
                 Vos informations
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     Nom complet *
@@ -232,7 +248,7 @@ const ContactForm: React.FC = () => {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
                     placeholder="Votre nom et prénom"
                   />
                 </div>
@@ -247,7 +263,7 @@ const ContactForm: React.FC = () => {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
                     placeholder="votre@email.com"
                   />
                 </div>
@@ -261,7 +277,7 @@ const ContactForm: React.FC = () => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
                     placeholder="06 12 34 56 78"
                   />
                 </div>
@@ -275,7 +291,7 @@ const ContactForm: React.FC = () => {
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
                     placeholder="Nom de votre entreprise"
                   />
                 </div>
@@ -284,68 +300,31 @@ const ContactForm: React.FC = () => {
 
             {/* Détails du projet */}
             <div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
+              <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
                 <Globe className="w-5 h-5 mr-2 text-pink-500" />
                 Votre projet
               </h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
-                <div>
-                  <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
-                    Type de projet *
-                  </label>
-                  <select
-                    id="projectType"
-                    name="projectType"
-                    required
-                    value={formData.projectType}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
-                  >
-                    <option value="">Sélectionnez</option>
-                    {projectTypes.map(type => (
-                      <option key={type} value={type}>{type}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                    Budget estimé *
-                  </label>
-                  <select
-                    id="budget"
-                    name="budget"
-                    required
-                    value={formData.budget}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
-                  >
-                    <option value="">Sélectionnez</option>
-                    {budgetRanges.map(range => (
-                      <option key={range} value={range}>{range}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="timeline" className="block text-sm font-medium text-gray-700 mb-2">
-                    Délai souhaité *
-                  </label>
-                  <select
-                    id="timeline"
-                    name="timeline"
-                    required
-                    value={formData.timeline}
-                    onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
-                  >
-                    <option value="">Sélectionnez</option>
-                    {timelineOptions.map(option => (
-                      <option key={option} value={option}>{option}</option>
-                    ))}
-                  </select>
-                </div>
+              
+              <div className="mb-4">
+                <label htmlFor="projectType" className="block text-sm font-medium text-gray-700 mb-2">
+                  Type de projet *
+                </label>
+                <select
+                  id="projectType"
+                  name="projectType"
+                  required
+                  value={formData.projectType}
+                  onChange={handleInputChange}
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                >
+                  <option value="">Sélectionnez</option>
+                  {projectTypes.map(type => (
+                    <option key={type} value={type}>{type}</option>
+                  ))}
+                </select>
               </div>
 
-              <div className="mb-6">
+              <div className="mb-4">
                 <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
                   Description du projet *
                 </label>
@@ -353,29 +332,29 @@ const ContactForm: React.FC = () => {
                   id="description"
                   name="description"
                   required
-                  rows={4}
+                  rows={3}
                   value={formData.description}
                   onChange={handleInputChange}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
-                  placeholder="Décrivez votre projet, vos objectifs, votre cible, vos besoins spécifiques..."
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                  placeholder="Décrivez votre projet, vos objectifs, votre cible..."
                 />
               </div>
 
               {/* Fonctionnalités */}
-              <div className="mb-6">
-                <label className="block text-sm font-medium text-gray-700 mb-4">
+              <div className="mb-4">
+                <label className="block text-sm font-medium text-gray-700 mb-3">
                   Fonctionnalités souhaitées
                 </label>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                   {featureOptions.map(feature => (
-                    <label key={feature} className="flex items-center space-x-2 cursor-pointer">
+                    <label key={feature} className="flex items-center space-x-2 cursor-pointer text-sm">
                       <input
                         type="checkbox"
                         checked={formData.features.includes(feature)}
                         onChange={() => handleFeatureToggle(feature)}
                         className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500"
                       />
-                      <span className="text-sm text-gray-700">{feature}</span>
+                      <span className="text-gray-700">{feature}</span>
                     </label>
                   ))}
                 </div>
@@ -386,7 +365,7 @@ const ContactForm: React.FC = () => {
                 <label className="block text-sm font-medium text-gray-700 mb-3">
                   Avez-vous déjà un site web ?
                 </label>
-                <div className="flex space-x-6 mb-4">
+                <div className="flex space-x-6 mb-3">
                   <label className="flex items-center space-x-2 cursor-pointer">
                     <input
                       type="radio"
@@ -416,19 +395,28 @@ const ContactForm: React.FC = () => {
                     name="currentSite"
                     value={formData.currentSite}
                     onChange={handleInputChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-colors"
                     placeholder="https://votre-site-actuel.com"
                   />
                 )}
               </div>
             </div>
+          </form>
 
-            {/* Submit button */}
-            <div className="text-center">
+          {/* Footer */}
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+              <div className="text-sm text-gray-500">
+                <p className="font-medium text-gray-700">Site en 24h pour 100€/mois</p>
+                <p>Design + Développement + Hébergement + Maintenance inclus</p>
+              </div>
+              
               <button
                 type="submit"
+                form="contact-form"
+                onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="inline-flex items-center justify-center px-8 py-4 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-xl disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="inline-flex items-center justify-center px-6 py-3 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 style={{
                   background: isSubmitting ? '#9CA3AF' : 'linear-gradient(90deg, #D95DB0 0%, #3344DC 100%)'
                 }}
@@ -445,15 +433,12 @@ const ContactForm: React.FC = () => {
                   </>
                 )}
               </button>
-              <p className="text-sm text-gray-500 mt-4">
-                Nous nous engageons à vous répondre sous 24h
-              </p>
             </div>
-          </form>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
-export default ContactForm;
+export default ContactModal;

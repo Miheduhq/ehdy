@@ -4,14 +4,20 @@ import { Menu, X } from 'lucide-react';
 interface HeaderProps {
   isMenuOpen: boolean;
   setIsMenuOpen: (open: boolean) => void;
+  openContactModal: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
+const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactModal }) => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setIsMenuOpen(false);
+  };
+
+  const handleContactClick = () => {
+    openContactModal();
     setIsMenuOpen(false);
   };
 
@@ -48,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
               Services
             </button>
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={handleContactClick}
               className="text-white hover:text-pink-400 transition-colors duration-300 text-sm xl:text-base font-medium"
             >
               Contact
@@ -59,10 +65,10 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
           <div className="flex items-center space-x-2 sm:space-x-3 lg:space-x-4">
             {/* CTA Button - Hidden on small screens, visible on medium+ */}
             <button 
-              onClick={() => scrollToSection('contact')}
+              onClick={handleContactClick}
               className="hidden md:block bg-white text-gray-900 px-3 lg:px-4 xl:px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition-colors duration-300 text-xs lg:text-sm xl:text-base whitespace-nowrap"
             >
-              1h de conseil gratuit
+              Obtenir un devis
             </button>
             
             {/* Hand logo in white circle */}
@@ -103,7 +109,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                   Services
                 </button>
                 <button 
-                  onClick={() => scrollToSection('contact')}
+                  onClick={handleContactClick}
                   className="text-white hover:text-pink-400 transition-colors duration-300 px-3 py-2 rounded-md text-base font-medium hover:bg-white/10 text-left"
                 >
                   Contact
@@ -112,10 +118,10 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen }) => {
                 {/* Mobile CTA Button */}
                 <div className="pt-3 border-t border-white/20">
                   <button 
-                    onClick={() => scrollToSection('contact')}
+                    onClick={handleContactClick}
                     className="w-full bg-white text-gray-900 px-4 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors duration-300 text-sm"
                   >
-                    1h de conseil gratuit
+                    Obtenir un devis
                   </button>
                 </div>
               </nav>
