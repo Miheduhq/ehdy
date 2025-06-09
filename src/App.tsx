@@ -9,7 +9,7 @@ function App() {
   const [isContactModalOpen, setIsContactModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ background: 'linear-gradient(135deg, #ffffd6 0%, #ffffff 100%)' }}>
       <Header 
         isMenuOpen={isMenuOpen} 
         setIsMenuOpen={setIsMenuOpen}
