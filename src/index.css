@@ -21,11 +21,6 @@
   animation: scroll-left 20s linear infinite;
 }
 
-/* Override Tailwind h-full to be 105% for SVG background */
-.h-full {
-  height: 105% !important;
-}
-
 /* New animations */
 @keyframes fade-in-up {
   0% {
@@ -305,4 +300,27 @@
 
 .animation-delay-1000 {
   animation-delay: 1s;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #f97316, #ec4899);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #ea580c, #db2777);
 }

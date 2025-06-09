@@ -85,7 +85,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
       
       const embed = {
         title: "🚀 Nouvelle demande de site vitrine - À partir de 100€/mois",
-        color: 0xD95DB0,
+        color: 0xF97316,
         fields: [
           {
             name: "👤 Informations client",
@@ -177,7 +177,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             <div>
               <h2 className="text-2xl md:text-3xl font-bold text-gray-900">
                 Votre site vitrine en{' '}
-                <span className="bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-transparent animate-gradient-text">
+                <span className="bg-gradient-to-r from-orange-500 to-pink-600 bg-clip-text text-transparent animate-gradient-text">
                   24h
                 </span>
               </h2>
@@ -194,9 +194,9 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
           </div>
 
           {/* Guarantee Banner */}
-          <div className="mb-6 p-4 bg-gradient-to-r from-pink-50 to-purple-50 border border-pink-200 rounded-lg animate-fade-in-up animation-delay-200">
+          <div className="mb-6 p-4 bg-gradient-to-r from-orange-50 to-pink-50 border border-orange-200 rounded-lg animate-fade-in-up animation-delay-200">
             <div className="flex items-center space-x-3">
-              <Clock className="w-6 h-6 text-pink-500 flex-shrink-0 animate-pulse" />
+              <Clock className="w-6 h-6 text-orange-500 flex-shrink-0 animate-pulse" />
               <div>
                 <h3 className="font-semibold text-gray-900">Garantie de rappel sous 24h</h3>
                 <p className="text-sm text-gray-600">
@@ -233,7 +233,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             {/* Informations personnelles */}
             <div className="animate-fade-in-up animation-delay-300">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <User className="w-5 h-5 mr-2 text-pink-500" />
+                <User className="w-5 h-5 mr-2 text-orange-500" />
                 Vos informations
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -248,7 +248,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     required
                     value={formData.name}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-orange-300"
                     placeholder="Votre nom et prénom"
                   />
                 </div>
@@ -263,7 +263,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     required
                     value={formData.email}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-orange-300"
                     placeholder="votre@email.com"
                   />
                 </div>
@@ -277,7 +277,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     name="phone"
                     value={formData.phone}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-orange-300"
                     placeholder="06 12 34 56 78"
                   />
                 </div>
@@ -291,7 +291,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     name="company"
                     value={formData.company}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-orange-300"
                     placeholder="Nom de votre entreprise"
                   />
                 </div>
@@ -301,7 +301,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
             {/* Détails du projet */}
             <div className="animate-fade-in-up animation-delay-400">
               <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
-                <Globe className="w-5 h-5 mr-2 text-pink-500" />
+                <Globe className="w-5 h-5 mr-2 text-orange-500" />
                 Votre site vitrine
               </h3>
               
@@ -315,7 +315,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   required
                   value={formData.projectType}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-orange-300"
                 >
                   <option value="">Sélectionnez</option>
                   {projectTypes.map(type => (
@@ -335,7 +335,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                   rows={3}
                   value={formData.description}
                   onChange={handleInputChange}
-                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-orange-300"
                   placeholder="Décrivez votre activité, vos services, votre cible..."
                 />
               </div>
@@ -352,7 +352,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                         type="checkbox"
                         checked={formData.features.includes(feature)}
                         onChange={() => handleFeatureToggle(feature)}
-                        className="w-4 h-4 text-pink-600 border-gray-300 rounded focus:ring-pink-500 transition-all duration-200"
+                        className="w-4 h-4 text-orange-600 border-gray-300 rounded focus:ring-orange-500 transition-all duration-200"
                       />
                       <span className="text-gray-700">{feature}</span>
                     </label>
@@ -373,7 +373,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                       value="oui"
                       checked={formData.hasExistingSite === 'oui'}
                       onChange={handleInputChange}
-                      className="w-4 h-4 text-pink-600 border-gray-300 focus:ring-pink-500"
+                      className="w-4 h-4 text-orange-600 border-gray-300 focus:ring-orange-500"
                     />
                     <span className="text-sm text-gray-700">Oui</span>
                   </label>
@@ -384,7 +384,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                       value="non"
                       checked={formData.hasExistingSite === 'non'}
                       onChange={handleInputChange}
-                      className="w-4 h-4 text-pink-600 border-gray-300 focus:ring-pink-500"
+                      className="w-4 h-4 text-orange-600 border-gray-300 focus:ring-orange-500"
                     />
                     <span className="text-sm text-gray-700">Non</span>
                   </label>
@@ -395,7 +395,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                     name="currentSite"
                     value={formData.currentSite}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent transition-all duration-300 hover:border-pink-300 animate-slide-down"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-300 hover:border-orange-300 animate-slide-down"
                     placeholder="https://votre-site-actuel.com"
                   />
                 )}
@@ -416,10 +416,7 @@ const ContactModal: React.FC<ContactModalProps> = ({ isOpen, onClose }) => {
                 form="contact-form"
                 onClick={handleSubmit}
                 disabled={isSubmitting}
-                className="inline-flex items-center justify-center px-6 py-3 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-                style={{
-                  background: isSubmitting ? '#9CA3AF' : 'linear-gradient(90deg, #D95DB0 0%, #3344DC 100%)'
-                }}
+                className="inline-flex items-center justify-center px-6 py-3 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none bg-gradient-to-r from-orange-500 to-pink-600 hover:from-orange-600 hover:to-pink-700"
               >
                 {isSubmitting ? (
                   <>
