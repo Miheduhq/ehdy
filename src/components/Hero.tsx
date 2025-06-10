@@ -61,10 +61,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               </div>
             </h1>
             
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 leading-relaxed font-inter max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
-              Créez votre présence digitale avec notre solution tout-en-un. 
-              Design moderne, développement rapide, hébergement et maintenance inclus.
-            </p>
+          
 
             <button 
               onClick={openContactModal}
