@@ -19,75 +19,20 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52\" style={{ 
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52" style={{ 
         background: 'linear-gradient(135deg, #FFFFD6 0%, #FFFFFF 100%)'
       }}>
-        {/* SVG Background */}
-        <div className="absolute inset-0 w-full h-full overflow-hidden">
-          <svg 
-            width="100%" 
-            height="100%" 
-            viewBox="0 0 1440 800" 
-            fill="none" 
-            xmlns="http://www.w3.org/2000/svg"
-            className="absolute inset-0 w-full h-full object-cover"
-            preserveAspectRatio="xMidYMid slice"
-          >
-            {/* Gradient definitions */}
-            <defs>
-              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{stopColor:"#FFE4E1", stopOpacity:0.3}} />
-                <stop offset="50%" style={{stopColor:"#E6E6FA", stopOpacity:0.2}} />
-                <stop offset="100%" style={{stopColor:"#F0F8FF", stopOpacity:0.1}} />
-              </linearGradient>
-              <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" style={{stopColor:"#FFB6C1", stopOpacity:0.2}} />
-                <stop offset="100%" style={{stopColor:"#DDA0DD", stopOpacity:0.1}} />
-              </linearGradient>
-            </defs>
-            
-            {/* Background shapes */}
-            <circle cx="200" cy="150" r="80" fill="url(#grad1)" opacity="0.4" />
-            <circle cx="1200" cy="200" r="120" fill="url(#grad2)" opacity="0.3" />
-            <circle cx="800" cy="400" r="60" fill="url(#grad1)" opacity="0.5" />
-            <circle cx="400" cy="600" r="90" fill="url(#grad2)" opacity="0.3" />
-            <circle cx="1100" cy="500" r="70" fill="url(#grad1)" opacity="0.4" />
-            
-            {/* Flowing curves */}
-            <path 
-              d="M0,300 Q360,200 720,300 T1440,250 L1440,0 L0,0 Z" 
-              fill="url(#grad1)" 
-              opacity="0.2"
-            />
-            <path 
-              d="M0,500 Q360,400 720,500 T1440,450 L1440,800 L0,800 Z" 
-              fill="url(#grad2)" 
-              opacity="0.15"
-            />
-            
-            {/* Decorative elements */}
-            <g opacity="0.1">
-              <circle cx="300" cy="300" r="3" fill="#D95DB0" />
-              <circle cx="500" cy="250" r="2" fill="#3344DC" />
-              <circle cx="700" cy="350" r="3" fill="#D95DB0" />
-              <circle cx="900" cy="280" r="2" fill="#3344DC" />
-              <circle cx="1100" cy="320" r="3" fill="#D95DB0" />
-              <circle cx="150" cy="400" r="2" fill="#3344DC" />
-              <circle cx="350" cy="450" r="3" fill="#D95DB0" />
-              <circle cx="550" cy="500" r="2" fill="#3344DC" />
-              <circle cx="750" cy="480" r="3" fill="#D95DB0" />
-              <circle cx="950" cy="520" r="2" fill="#3344DC" />
-            </g>
-            
-            {/* Subtle geometric patterns */}
-            <g opacity="0.05">
-              <polygon points="100,100 120,80 140,100 120,120" fill="#D95DB0" />
-              <polygon points="1300,150 1320,130 1340,150 1320,170" fill="#3344DC" />
-              <polygon points="600,600 620,580 640,600 620,620" fill="#D95DB0" />
-              <polygon points="200,500 220,480 240,500 220,520" fill="#3344DC" />
-            </g>
-          </svg>
-        </div>
+        {/* PNG Background */}
+        <div 
+          className="absolute inset-0 w-full h-full"
+          style={{
+            backgroundImage: 'url(https://i.ibb.co/9P0r9rV/image.png)',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            opacity: 0.3
+          }}
+        />
 
         <div className="relative z-10 w-full px-4 sm:px-6 py-8 sm:py-52">
           <div className="text-center max-w-4xl mx-auto">
