@@ -19,7 +19,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52\" style={{ 
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52" style={{ 
         background: 'linear-gradient(135deg, #FFFFD6 0%, #FFFFFF 100%)'
       }}>
         {/* Subtle pattern overlay inspired by the image */}
@@ -61,11 +61,33 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               </div>
             </h1>
             
-          
+            <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 leading-relaxed font-inter max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
+              Créez votre présence digitale avec notre solution tout-en-un. 
+              Design moderne, développement rapide, hébergement et maintenance inclus.
+            </p>
 
             <button 
               onClick={openContactModal}
-              className="bg-gray-900 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-lg font-semibold text-base sm:text-lg hover:bg-gray-800 transition-all duration-300 transform hover:scale-105 hover:shadow-xl font-inter animate-fade-in-up animation-delay-400 hover:animate-pulse-gentle"
+              className="animate-fade-in-up animation-delay-400 hover:scale-105 transition-all duration-300 hover:shadow-xl"
+              style={{
+                display: 'flex',
+                width: '565px',
+                height: '112px',
+                padding: '16px 68.15px 16px 69.85px',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexShrink: 0,
+                borderRadius: '15px',
+                border: '8px solid #404040',
+                background: 'linear-gradient(180deg, #1F1F1F 0%, #000 100%)',
+                color: 'white',
+                fontSize: '24px',
+                fontWeight: '600',
+                fontFamily: 'Inter, sans-serif',
+                cursor: 'pointer',
+                maxWidth: '100%',
+                margin: '0 auto'
+              }}
             >
               Obtenir un devis
             </button>
