@@ -19,7 +19,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52\" style={{ 
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52" style={{ 
         background: 'linear-gradient(135deg, #FFFFD6 0%, #FFFFFF 100%)'
       }}>
         {/* Subtle pattern overlay inspired by the image */}
@@ -43,7 +43,10 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 fontWeight: '700',
                 lineHeight: '1.1',
                 letterSpacing: '-2px',
-                whiteSpace: 'nowrap'
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%'
               }}>
                 Votre site clé en mains en 24h
               </div>
@@ -56,7 +59,12 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 fontWeight: '400',
                 lineHeight: '1.1',
                 letterSpacing: '-2px',
-                marginTop: '0.5rem'
+                marginTop: '0.5rem',
+                textAlign: 'center',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                width: '100%'
               }}>
                 À partir de 100€ par mois
               </div>
