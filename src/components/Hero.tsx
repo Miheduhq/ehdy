@@ -19,7 +19,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52\" style={{ 
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52" style={{ 
         background: 'linear-gradient(135deg, #FFFFD6 0%, #FFFFFF 100%)'
       }}>
         {/* Subtle pattern overlay inspired by the image */}
@@ -38,15 +38,16 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 color: '#0A090F',
                 textAlign: 'center',
                 fontFamily: 'Prompt, sans-serif',
-                fontSize: 'clamp(60px, 8vw, 100px)',
+                fontSize: 'clamp(40px, 6vw, 70px)',
                 fontStyle: 'normal',
                 fontWeight: '700',
                 lineHeight: '1.1',
-                letterSpacing: '-2px',
+                letterSpacing: '-1px',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                width: '100%'
+                width: '100%',
+                whiteSpace: 'nowrap'
               }}>
                 Votre site clé en mains en 24h
               </div>
@@ -54,17 +55,18 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               <div style={{
                 color: '#0A090F',
                 fontFamily: 'Prompt, sans-serif',
-                fontSize: 'clamp(32px, 4.5vw, 60px)',
+                fontSize: 'clamp(24px, 3.5vw, 40px)',
                 fontStyle: 'normal',
                 fontWeight: '400',
                 lineHeight: '1.1',
-                letterSpacing: '-2px',
+                letterSpacing: '-1px',
                 marginTop: '0.5rem',
                 textAlign: 'center',
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
-                width: '100%'
+                width: '100%',
+                whiteSpace: 'nowrap'
               }}>
                 À partir de 100€ par mois
               </div>
@@ -75,19 +77,19 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               className="animate-fade-in-up animation-delay-400 hover:scale-105 transition-all duration-300 hover:shadow-xl"
               style={{
                 display: 'flex',
-                width: '565px',
-                height: '112px',
-                padding: '16px 68.15px 16px 69.85px',
+                width: '300px',
+                height: '60px',
+                padding: '12px 40px',
                 justifyContent: 'center',
                 alignItems: 'center',
                 flexShrink: 0,
                 borderRadius: '15px',
-                border: '8px solid #404040',
+                border: '4px solid #404040',
                 background: 'linear-gradient(180deg, #1F1F1F 0%, #000 100%)',
                 color: 'white',
-                fontSize: '24px',
+                fontSize: '16px',
                 fontWeight: '600',
-                fontFamily: 'Inter, sans-serif',
+                fontFamily: 'Prompt, sans-serif',
                 cursor: 'pointer',
                 maxWidth: '100%',
                 margin: '0 auto'

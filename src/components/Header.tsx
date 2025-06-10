@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/10 backdrop-blur-sm animate-slide-down">
+    <header className="fixed top-0 left-0 right-0 z-50 animate-slide-down">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-7">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8 animate-fade-in">
             <button 
               onClick={() => scrollToSection('accueil')}
-              className="text-black hover:text-pink-400 transition-all duration-300 font-medium hover:scale-110 transform"
+              className="text-black hover:text-gray-600 transition-all duration-300 font-medium hover:scale-110 transform"
               style={{
                 fontFamily: 'Prompt, sans-serif',
                 fontSize: '16px',
@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
             </button>
             <button 
               onClick={() => scrollToSection('services')}
-              className="text-black hover:text-pink-400 transition-all duration-300 font-medium hover:scale-110 transform"
+              className="text-black hover:text-gray-600 transition-all duration-300 font-medium hover:scale-110 transform"
               style={{
                 fontFamily: 'Prompt, sans-serif',
                 fontSize: '16px',
@@ -62,7 +62,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
             </button>
             <button 
               onClick={() => scrollToSection('portfolio')}
-              className="text-black hover:text-pink-400 transition-all duration-300 font-medium hover:scale-110 transform"
+              className="text-black hover:text-gray-600 transition-all duration-300 font-medium hover:scale-110 transform"
               style={{
                 fontFamily: 'Prompt, sans-serif',
                 fontSize: '16px',
@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
             </button>
             <button 
               onClick={handleContactClick}
-              className="text-black hover:text-pink-400 transition-all duration-300 font-medium hover:scale-110 transform"
+              className="text-black hover:text-gray-600 transition-all duration-300 font-medium hover:scale-110 transform"
               style={{
                 fontFamily: 'Prompt, sans-serif',
                 fontSize: '16px',
@@ -109,15 +109,6 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
               Devis gratuit
             </button>
             
-            {/* Hand logo in white circle */}
-            <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-12 lg:h-12 bg-white rounded-full flex items-center justify-center flex-shrink-0 hover:scale-110 transition-transform duration-300 animate-bounce-gentle">
-              <img 
-                src="https://i.ibb.co/0RYfRHYT/image-1.png" 
-                alt="Hand logo" 
-                className="w-8 h-8 sm:w-10 sm:h-10 lg:w-12 lg:h-8 object-contain"
-              />
-            </div>
-            
             {/* Mobile menu button */}
             <button 
               className="lg:hidden text-black p-1 hover:bg-black/10 rounded-md transition-all duration-300 hover:scale-110 transform"
@@ -136,7 +127,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
               <nav className="flex flex-col space-y-3">
                 <button 
                   onClick={() => scrollToSection('accueil')}
-                  className="text-black hover:text-pink-400 transition-all duration-300 px-3 py-2 rounded-md font-medium hover:bg-gray-100 text-left hover:scale-105 transform"
+                  className="text-black hover:text-gray-600 transition-all duration-300 px-3 py-2 rounded-md font-medium hover:bg-gray-100 text-left hover:scale-105 transform"
                   style={{
                     fontFamily: 'Prompt, sans-serif',
                     fontSize: '16px',
@@ -147,7 +138,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
                 </button>
                 <button 
                   onClick={() => scrollToSection('services')}
-                  className="text-black hover:text-pink-400 transition-all duration-300 px-3 py-2 rounded-md font-medium hover:bg-gray-100 text-left hover:scale-105 transform"
+                  className="text-black hover:text-gray-600 transition-all duration-300 px-3 py-2 rounded-md font-medium hover:bg-gray-100 text-left hover:scale-105 transform"
                   style={{
                     fontFamily: 'Prompt, sans-serif',
                     fontSize: '16px',
@@ -158,7 +149,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
                 </button>
                 <button 
                   onClick={() => scrollToSection('portfolio')}
-                  className="text-black hover:text-pink-400 transition-all duration-300 px-3 py-2 rounded-md font-medium hover:bg-gray-100 text-left hover:scale-105 transform"
+                  className="text-black hover:text-gray-600 transition-all duration-300 px-3 py-2 rounded-md font-medium hover:bg-gray-100 text-left hover:scale-105 transform"
                   style={{
                     fontFamily: 'Prompt, sans-serif',
                     fontSize: '16px',
@@ -169,7 +160,7 @@ const Header: React.FC<HeaderProps> = ({ isMenuOpen, setIsMenuOpen, openContactM
                 </button>
                 <button 
                   onClick={handleContactClick}
-                  className="text-black hover:text-pink-400 transition-all duration-300 px-3 py-2 rounded-md font-medium hover:bg-gray-100 text-left hover:scale-105 transform"
+                  className="text-black hover:text-gray-600 transition-all duration-300 px-3 py-2 rounded-md font-medium hover:bg-gray-100 text-left hover:scale-105 transform"
                   style={{
                     fontFamily: 'Prompt, sans-serif',
                     fontSize: '16px',
