@@ -19,20 +19,67 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52\" style={{ 
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52" style={{ 
         background: 'linear-gradient(135deg, #FFFFD6 0%, #FFFFFF 100%)'
       }}>
-        {/* PNG Background */}
-        <div 
-          className="absolute inset-0 w-full h-full"
-          style={{
-            backgroundImage: 'url(https://i.ibb.co/9P0r9rV/image.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            opacity: 0.3
-          }}
-        />
+        {/* SVG Background Pattern */}
+        <div className="absolute inset-0 w-full h-full opacity-20">
+          <svg 
+            width="100%" 
+            height="100%" 
+            viewBox="0 0 1200 800" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-full h-full object-cover"
+            preserveAspectRatio="xMidYMid slice"
+          >
+            {/* Geometric shapes inspired by the original image */}
+            <defs>
+              <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                <circle cx="20" cy="20" r="2" fill="#000000" opacity="0.1"/>
+              </pattern>
+              <pattern id="lines" x="0" y="0" width="60" height="60" patternUnits="userSpaceOnUse">
+                <path d="M0,30 L60,30" stroke="#000000" strokeWidth="1" opacity="0.05"/>
+                <path d="M30,0 L30,60" stroke="#000000" strokeWidth="1" opacity="0.05"/>
+              </pattern>
+            </defs>
+            
+            {/* Background patterns */}
+            <rect width="100%" height="100%" fill="url(#dots)"/>
+            <rect width="100%" height="100%" fill="url(#lines)"/>
+            
+            {/* Abstract geometric shapes */}
+            <circle cx="200" cy="150" r="80" fill="#FFE066" opacity="0.3"/>
+            <circle cx="1000" cy="200" r="120" fill="#FF6B6B" opacity="0.2"/>
+            <circle cx="800" cy="600" r="100" fill="#4ECDC4" opacity="0.25"/>
+            <circle cx="150" cy="500" r="60" fill="#45B7D1" opacity="0.3"/>
+            
+            {/* Triangular shapes */}
+            <polygon points="300,400 350,300 400,400" fill="#96CEB4" opacity="0.2"/>
+            <polygon points="900,500 950,400 1000,500" fill="#FFEAA7" opacity="0.25"/>
+            <polygon points="600,100 650,50 700,100" fill="#DDA0DD" opacity="0.2"/>
+            
+            {/* Rectangular elements */}
+            <rect x="500" y="300" width="80" height="80" rx="10" fill="#FFB6C1" opacity="0.2" transform="rotate(15 540 340)"/>
+            <rect x="100" y="250" width="60" height="60" rx="8" fill="#98FB98" opacity="0.25" transform="rotate(-20 130 280)"/>
+            <rect x="850" y="350" width="70" height="70" rx="12" fill="#F0E68C" opacity="0.2" transform="rotate(30 885 385)"/>
+            
+            {/* Curved lines */}
+            <path d="M0,400 Q300,300 600,400 T1200,400" stroke="#000000" strokeWidth="2" fill="none" opacity="0.1"/>
+            <path d="M0,600 Q400,500 800,600 T1200,600" stroke="#000000" strokeWidth="2" fill="none" opacity="0.08"/>
+            
+            {/* Small decorative elements */}
+            <circle cx="450" cy="200" r="15" fill="#FF7F50" opacity="0.3"/>
+            <circle cx="750" cy="450" r="20" fill="#20B2AA" opacity="0.25"/>
+            <circle cx="350" cy="650" r="12" fill="#DA70D6" opacity="0.3"/>
+            <circle cx="950" cy="150" r="18" fill="#32CD32" opacity="0.2"/>
+            
+            {/* Diamond shapes */}
+            <polygon points="550,500 570,480 590,500 570,520" fill="#FFD700" opacity="0.3"/>
+            <polygon points="250,350 270,330 290,350 270,370" fill="#FF69B4" opacity="0.25"/>
+            <polygon points="1050,450 1070,430 1090,450 1070,470" fill="#00CED1" opacity="0.2"/>
+          </svg>
+        </div>
 
         <div className="relative z-10 w-full px-4 sm:px-6 py-8 sm:py-52">
           <div className="text-center max-w-4xl mx-auto">
