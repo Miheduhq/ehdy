@@ -33,19 +33,22 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
 
         <div className="relative z-10 w-full px-4 sm:px-6 py-8 sm:py-52">
           <div className="text-center max-w-4xl mx-auto">
-            <h1 className="leading-tight mb-8 animate-fade-in-up" style={{
-              color: '#0A090F',
-              textAlign: 'center',
-              fontFamily: 'Prompt, sans-serif',
-              fontSize: 'clamp(60px, 8vw, 100px)',
-              fontStyle: 'normal',
-              fontWeight: '700',
-              lineHeight: '110px',
-              letterSpacing: '-2px'
-            }}>
-              Votre site clé en mainDs en 24h 
-             
-              <span style={{
+            <h1 className="leading-tight mb-8 animate-fade-in-up">
+              <div style={{
+                color: '#0A090F',
+                textAlign: 'center',
+                fontFamily: 'Prompt, sans-serif',
+                fontSize: 'clamp(60px, 8vw, 100px)',
+                fontStyle: 'normal',
+                fontWeight: '700',
+                lineHeight: '110px',
+                letterSpacing: '-2px',
+                marginBottom: '0.5rem'
+              }}>
+                Votre site clé en mains en 24h
+              </div>
+              
+              <div style={{
                 color: '#0A090F',
                 fontFamily: 'Prompt, sans-serif',
                 fontSize: 'clamp(48px, 6.4vw, 80px)',
@@ -55,7 +58,7 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 letterSpacing: '-4px'
               }}>
                 À partir de 100€ par mois
-              </span>
+              </div>
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 leading-relaxed font-inter max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
