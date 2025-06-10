@@ -19,7 +19,7 @@ interface HeroProps {
 const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
   return (
     <>
-      <section id="accueil\" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52\" style={{ 
+      <section id="accueil" className="relative z-10 w-full px-6 sm:px-6 py-28 sm:py-52" style={{ 
         background: 'linear-gradient(135deg, #FFFFD6 0%, #FFFFFF 100%)'
       }}>
         {/* Subtle pattern overlay inspired by the image */}
@@ -41,9 +41,9 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
                 fontSize: 'clamp(60px, 8vw, 100px)',
                 fontStyle: 'normal',
                 fontWeight: '700',
-                lineHeight: '110px',
+                lineHeight: '1.1',
                 letterSpacing: '-2px',
-                marginBottom: '0.5rem'
+                whiteSpace: 'nowrap'
               }}>
                 Votre site clé en mains en 24h
               </div>
@@ -51,20 +51,16 @@ const Hero: React.FC<HeroProps> = ({ openContactModal }) => {
               <div style={{
                 color: '#0A090F',
                 fontFamily: 'Prompt, sans-serif',
-                fontSize: 'clamp(48px, 6.4vw, 80px)',
+                fontSize: 'clamp(32px, 4.5vw, 60px)',
                 fontStyle: 'normal',
                 fontWeight: '400',
-                lineHeight: '110px',
-                letterSpacing: '-4px'
+                lineHeight: '1.1',
+                letterSpacing: '-2px',
+                marginTop: '0.5rem'
               }}>
                 À partir de 100€ par mois
               </div>
             </h1>
-            
-            <p className="text-lg sm:text-xl text-gray-600 mb-8 sm:mb-12 leading-relaxed font-inter max-w-2xl mx-auto animate-fade-in-up animation-delay-200">
-              Créez votre présence digitale avec notre solution tout-en-un. 
-              Design moderne, développement rapide, hébergement et maintenance inclus.
-            </p>
 
             <button 
               onClick={openContactModal}
